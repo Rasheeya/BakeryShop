@@ -1,0 +1,310 @@
+/* ==========================================================================
+   LOGIN.CSS - COMPACT FIT LOGIN PAGE STYLES (NO SCROLL FIT)
+   ========================================================================== */
+
+.auth-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1rem;
+  background: radial-gradient(circle at 10% 20%, rgba(200, 131, 52, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 90% 80%, rgba(230, 165, 148, 0.1) 0%, transparent 50%),
+              var(--bg-cream);
+  overflow-y: auto;
+}
+
+.back-home-wrapper {
+  width: 100%;
+  max-width: 860px;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #FFFFFF !important;
+  color: var(--primary-dark) !important;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-light);
+  box-shadow: 0 3px 10px rgba(32, 18, 11, 0.08);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-home-btn i {
+  color: var(--accent-caramel) !important;
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast);
+}
+
+.back-home-btn:hover {
+  background: var(--primary-dark) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(32, 18, 11, 0.15);
+}
+
+.back-home-btn:hover i {
+  color: var(--accent-gold) !important;
+}
+
+.auth-card-container {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 10px 36px rgba(32, 18, 11, 0.09);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  max-width: 860px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.18fr 1fr;
+}
+
+@media (max-width: 900px) {
+  .auth-card-container {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+
+.auth-form-side {
+  padding: 1.35rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  .auth-form-side {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.auth-header {
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.auth-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  color: var(--primary-dark);
+}
+
+.auth-header p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.auth-header .section-tag {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+
+/* Account Type Selector */
+.account-type-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.account-type-pill {
+  border: 1.5px solid var(--border-light);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--bg-cream);
+}
+
+.account-type-pill.active {
+  border-color: var(--accent-caramel);
+  background: rgba(200, 131, 52, 0.08);
+}
+
+.account-type-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: var(--accent-caramel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.account-type-info h5 {
+  font-size: 0.85rem;
+  margin-bottom: 0.05rem;
+  color: var(--primary-dark);
+}
+
+.account-type-info span {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 0.65rem;
+}
+
+.form-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.form-control {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.92rem;
+  border-radius: 8px;
+  min-height: 42px;
+}
+
+@media (max-width: 576px) {
+  .auth-page-wrapper {
+    padding: 0.75rem 0.5rem;
+    justify-content: flex-start;
+  }
+  .form-control {
+    font-size: 16px; /* Prevents auto zoom */
+  }
+  .account-type-pill {
+    padding: 0.45rem 0.6rem;
+    gap: 0.4rem;
+  }
+  .account-type-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.85rem;
+  }
+  .account-type-info h5 {
+    font-size: 0.8rem;
+  }
+  .account-type-info span {
+    font-size: 0.64rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-form-side {
+    padding: 1rem 0.65rem;
+  }
+  .auth-header h2 {
+    font-size: 1.3rem;
+  }
+  .account-type-selector {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+}
+
+/* Auth Aside / Benefits Side */
+.auth-aside-side {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #351C10 100%);
+  color: #FFFFFF;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .auth-aside-side {
+    display: none;
+  }
+}
+
+.auth-aside-content .badge {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.auth-aside-content h3 {
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.auth-aside-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.benefit-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(229, 168, 75, 0.2);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+.benefit-item-text h5 {
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  margin-bottom: 0.1rem;
+}
+
+.benefit-item-text p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.72rem;
+  margin: 0;
+}
+
+.auth-security-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.auth-security-badge i {
+  color: #10B981;
+  font-size: 1rem;
+}

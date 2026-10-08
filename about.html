@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Le Petit Four Artisan Bakery</title>
+  <meta name="description" content="Discover our heritage, meet our master pastry chefs, and learn about our dedication to organic slow-fermented baking since 2011.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="bakery-navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="nav-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="404.html" class="nav-action-btn" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="404.html" class="nav-action-btn cart-toggle-btn" title="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="nav-badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" class="btn btn-sm btn-primary d-none-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="mobile-drawer-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="mobile-drawer-logo">
+      </a>
+      <button class="mobile-drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link active"><span>About</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </div>
+  <div class="nav-backdrop"></div>
+
+  <!-- ==================== BANNER ==================== -->
+  <div class="page-banner banner-about">
+    <div class="container">
+      <span class="section-tag" style="background: rgba(255,255,255,0.15); color: #FFFFFF;"><i class="fa-solid fa-wheat-awn text-gold"></i> Our Story & Heritage</span>
+      <h1>Crafting Sweet Memories Since 2011</h1>
+      <p>A lifelong devotion to traditional European baking, 100% pure organic ingredients, and modern confectionery art.</p>
+
+      <!-- Founder Philosophy Quote -->
+      <div class="banner-quote-box">
+        <i class="fa-solid fa-quote-left"></i>
+        <span>"True artisanal baking is the poetry of slow patience, natural fermentation, and honest French craftsmanship."</span>
+        <small>— Chef Jean-Pierre Laurent (Master Baker & Founder)</small>
+      </div>
+
+      <!-- Heritage Stats Strip -->
+      <div class="banner-stats-strip">
+        <div class="banner-stat-cell">
+          <strong>15+</strong>
+          <span>Years in Salem</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>100%</strong>
+          <span>Normandy Butter</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>36h</strong>
+          <span>Slow Ferment</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>10k+</strong>
+          <span>Happy Families</span>
+        </div>
+      </div>
+      
+      <!-- Feature Highlights -->
+      <div class="banner-feature-pills">
+        <span class="banner-pill"><i class="fa-solid fa-wheat-awn text-gold"></i> 100% Organic Flours</span>
+        <span class="banner-pill"><i class="fa-solid fa-award text-gold"></i> Heritage Starter "Belle"</span>
+        <span class="banner-pill"><i class="fa-solid fa-medal text-gold"></i> Master French Bakers</span>
+        <span class="banner-pill"><i class="fa-solid fa-shield-heart text-gold"></i> Zero Additives</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="banner-actions">
+        <a href="404.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-book-open"></i> Read Our Story</a>
+        <a href="404.html" class="btn btn-white btn-sm"><i class="fa-solid fa-users"></i> Meet Master Bakers</a>
+        <a href="404.html" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.45);"><i class="fa-solid fa-cake-candles"></i> Explore Menu</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== A. OUR BAKERY STORY ==================== -->
+  <section class="section" id="our-journey">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-media">
+          <img src="assets/bakery-kitchen.webp" alt="Master Baker at Work" class="story-img-main">
+          <img src="assets/baking-process.webp" alt="Pastry Preparation" class="story-img-floating">
+        </div>
+
+        <div class="story-content">
+          <span class="section-tag">Our Journey</span>
+          <h2>Baking with Heart, Heritage, and Uncompromising Purity</h2>
+          <div class="ornament" style="margin-left: 0;"><span></span><i class="fa-solid fa-wheat-awn"></i><span></span></div>
+          <p class="story-lead">
+            Le Petit Four began with a simple copper whisk, a heritage sourdough starter named "Belle", and a dream to bring authentic French patisserie to our neighborhood.
+          </p>
+          <p class="story-p">
+            Over the past 15 years, our kitchen has evolved into an artisanal sanctuary. We maintain time-honored slow-fermentation techniques that require 36 hours for a single loaf of bread, while introducing innovative flavor profiles to our celebration cakes and delicate pastries.
+          </p>
+          <p class="story-p">
+            We never use pre-made mixes, artificial colorings, or hydrogenated oils. Every single butter layer is hand-rolled, every berry compote is simmered in small copper cauldrons, and every creation is crafted to elevate life's happiest moments.
+          </p>
+
+          <div class="story-highlights">
+            <div class="story-highlight-item">
+              <div class="story-highlight-icon"><i class="fa-solid fa-check"></i></div>
+              <span>36-Hour Sourdough Ferment</span>
+            </div>
+            <div class="story-highlight-item">
+              <div class="story-highlight-icon"><i class="fa-solid fa-check"></i></div>
+              <span>100% Normandy Butter</span>
+            </div>
+            <div class="story-highlight-item">
+              <div class="story-highlight-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Organic Local Flours</span>
+            </div>
+            <div class="story-highlight-item">
+              <div class="story-highlight-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Zero Artificial Additives</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== B. OUR BAKING PHILOSOPHY ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Principles</span>
+        <h2>Our Baking Philosophy</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-seedling"></i><span></span></div>
+        <p>Four unwavering pillars guide every flour dusting, recipe development, and oven bake in our bakery.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="philosophy-card">
+          <div class="philosophy-num">01</div>
+          <h3>Fresh Pure Ingredients</h3>
+          <p>We source heritage grain varieties, single-origin Valrhona chocolate, fresh seasonal berries, and free-range dairy directly from sustainable farms.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-num">02</div>
+          <h3>Handmade Quality</h3>
+          <p>No industrial shortcuts. Every croissant is laminated by hand, every tart crust is hand-pressed, and every cake tier is meticulously sculpted.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-num">03</div>
+          <h3>Traditional Taste</h3>
+          <p>Rooted in centuries of classic European viennoiserie and bread-making tradition, honoring the authentic textures and aroma of wild fermentation.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-num">04</div>
+          <h3>Creative Modern Art</h3>
+          <p>We blend timeless culinary fundamentals with contemporary architectural cake designs, delicate sugar flowers, and vibrant mirror glazes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== C. MEET OUR MASTER BAKERS ==================== -->
+  <section class="section" id="meet-bakers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Masters Behind the Craft</span>
+        <h2>Meet Our Head Pastry Chefs</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-hat-chef"></i><span></span></div>
+        <p>Passionate culinary artists bringing decades of world-class patisserie experience to your table.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Baker 1 -->
+        <div class="baker-card">
+          <div class="baker-img-wrap">
+            <img src="assets/chef-laurent.webp" alt="Chef Jean-Pierre Laurent - Founder & Master Pastry Chef" width="600" height="800" loading="lazy">
+            <div class="baker-socials">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="baker-info">
+            <h4>Jean-Pierre Laurent</h4>
+            <div class="baker-role">Founder & Master Pastry Chef</div>
+            <div class="baker-specialty">18 Yrs Exp • Parisian Viennoiserie & Sourdough</div>
+          </div>
+        </div>
+
+        <!-- Baker 2 -->
+        <div class="baker-card">
+          <div class="baker-img-wrap">
+            <img src="assets/chef-sophie.webp" alt="Chef Claire Moreau - Head Cake Architect" width="600" height="800" loading="lazy">
+            <div class="baker-socials">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="baker-info">
+            <h4>Claire Moreau</h4>
+            <div class="baker-role">Head Cake Architect</div>
+            <div class="baker-specialty">12 Yrs Exp • Bespoke Wedding & Sculpted Cakes</div>
+          </div>
+        </div>
+
+        <!-- Baker 3 -->
+        <div class="baker-card">
+          <div class="baker-img-wrap">
+            <img src="assets/chef-antoine.webp" alt="Chef Antoine Dubois - Master Chocolatier" width="600" height="800" loading="lazy">
+            <div class="baker-socials">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="baker-info">
+            <h4>Antoine Dubois</h4>
+            <div class="baker-role">Master Chocolatier</div>
+            <div class="baker-specialty">14 Yrs Exp • Macarons & Artisanal Bonbons</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== D. OUR BAKERY JOURNEY TIMELINE ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Milestones</span>
+        <h2>Our Bakery Journey</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-clock-rotate-left"></i><span></span></div>
+        <p>A look back at our growth from a small artisan kitchen to a beloved city culinary landmark.</p>
+      </div>
+
+      <div class="timeline-wrap">
+        <!-- Milestone 1 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2011</span>
+            <h4>Bakery Founded</h4>
+            <p>Chef Jean-Pierre started baking in a humble 400 sq ft kitchen with a single stone oven and 3 signature sourdough recipes.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2014</span>
+            <h4>First Flagship Patisserie</h4>
+            <p>Opened our flagship café and bakery in downtown, expanding to full French viennoiseries and gourmet morning coffee.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2018</span>
+            <h4>Signature Cake Studio</h4>
+            <p>Launched our dedicated bespoke celebration and wedding cake studio, receiving the National Culinary Excellence Award.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2021</span>
+            <h4>Online Ordering & Subscriptions</h4>
+            <p>Introduced climate-controlled bakery delivery and weekly breakfast subscription boxes to serve households across the city.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2026</span>
+            <h4>25,000+ Celebrations Milestone</h4>
+            <p>Celebrating over 25,000 orders delivered, with a state-of-the-art kitchen facility and a community of passionate food lovers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== E. QUALITY & FRESHNESS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Quality Standards</span>
+        <h2>Purity & Freshness In Every Bite</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-shield-check"></i><span></span></div>
+        <p>Our commitment to kitchen hygiene, natural processes, and strict quality control benchmarks.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="quality-card">
+          <img src="assets/croissant-hero.webp" alt="Fresh Ingredients" class="quality-card-img">
+          <div class="quality-card-body">
+            <h4><i class="fa-solid fa-leaf"></i> Fresh Ingredients</h4>
+            <p>Daily deliveries of organic farm eggs, churned butter, and unbleached grain flours.</p>
+          </div>
+        </div>
+
+        <div class="quality-card">
+          <img src="assets/artisan-baguette.webp" alt="Daily Baking" class="quality-card-img">
+          <div class="quality-card-body">
+            <h4><i class="fa-solid fa-fire"></i> Daily Fresh Baking</h4>
+            <p>All morning batches are baked fresh between 4:00 AM and 7:00 AM daily.</p>
+          </div>
+        </div>
+
+        <div class="quality-card">
+          <img src="assets/chocolate-eclair.webp" alt="Quality Control" class="quality-card-img">
+          <div class="quality-card-body">
+            <h4><i class="fa-solid fa-award"></i> Quality Inspection</h4>
+            <p>Every cake tier and pastry batch undergoes chef sensory and presentation approval.</p>
+          </div>
+        </div>
+
+        <div class="quality-card">
+          <img src="assets/bakery-kitchen.webp" alt="Hygienic Kitchen" class="quality-card-img">
+          <div class="quality-card-body">
+            <h4><i class="fa-solid fa-shield-halved"></i> Hygienic Kitchen</h4>
+            <p>Continuous sanitization, HEPA air filtration, and strict food safety protocols.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== F. BAKERY STATISTICS ==================== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="stats-counter-grid">
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-calendar-days stat-counter-icon"></i>
+          <div class="stat-number" data-target="15" data-suffix="+">0</div>
+          <div class="stat-title">Years Baking</div>
+        </div>
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-users stat-counter-icon"></i>
+          <div class="stat-number" data-target="18000" data-suffix="+">0</div>
+          <div class="stat-title">Customers Served</div>
+        </div>
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-cake-candles stat-counter-icon"></i>
+          <div class="stat-number" data-target="6500" data-suffix="+">0</div>
+          <div class="stat-title">Cakes Created</div>
+        </div>
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-truck-ramp-box stat-counter-icon"></i>
+          <div class="stat-number" data-target="25000" data-suffix="+">0</div>
+          <div class="stat-title">Orders Delivered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL CART & QUICK VIEW MODALS ==================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-accent"></i> Your Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-drawer-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div class="cart-summary-row"><span>Estimated Delivery</span><span id="cart-delivery">$0.00</span></div>
+      <div class="cart-total-row"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='404.html';">
+        <i class="fa-solid fa-lock"></i> Checkout Now
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="window.Bakery.closeQuickView()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-grid">
+        <div class="quickview-media"><img src="" alt="" class="quickview-img"></div>
+        <div class="quickview-details">
+          <div class="quickview-badge-wrap"><span class="badge badge-gold quickview-cat-val">Category</span></div>
+          <h3 class="quickview-title">Product Title</h3>
+          <div class="quickview-price-rating">
+            <span class="quickview-price">$0.00</span>
+            <div class="product-rating" style="margin: 0;">
+              <span class="stars" style="color: #F59E0B;"><i class="fa-solid fa-star"></i></span>
+              <strong class="quickview-rating-val" style="margin-left: 4px;">4.9</strong>
+              <span class="rating-count quickview-reviews-val">(0 reviews)</span>
+            </div>
+          </div>
+          <p class="quickview-desc">Description placeholder</p>
+          <div class="quickview-meta-list">
+            <div><strong>Availability:</strong> Fresh In Stock (Baked Daily)</div>
+            <div><strong>Storage:</strong> Store at 18-20°C in cool dry place</div>
+          </div>
+          <div class="quickview-actions">
+            <div class="qty-input-group">
+              <button onclick="let q=document.getElementById('quickview-qty'); if(q.value>1)q.value--;">-</button>
+              <input type="number" id="quickview-qty" value="1" min="1" max="50">
+              <button onclick="let q=document.getElementById('quickview-qty'); q.value++;">+</button>
+            </div>
+            <button class="btn btn-primary modal-add-cart-btn" style="flex-grow: 1;">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bakery-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 0.5rem;">
+            <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="footer-brand-logo">
+          </a>
+          <p>Handcrafted European sourdoughs, viennoiseries, custom event cakes, and fine chocolate bonbons baked fresh every morning.</p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Bakery</h4>
+          <div class="footer-links">
+            <a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a>
+            <a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a>
+            <a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a>
+            <a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+        <!-- Shop Links -->
+        <div class="footer-col">
+          <h4>Shop Fresh</h4>
+          <div class="footer-links">
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Celebration Cakes</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Artisan Sourdough</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> French Pastries</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Gourmet Cookies</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Macarons & Desserts</a>
+          </div>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="footer-col footer-contact">
+          <h4>Visit & Contact Us</h4>
+          <div style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.8);">
+            <div style="display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-location-dot text-gold" style="margin-top: 4px; font-size: 0.95rem;"></i>
+              <span style="line-height: 1.5;">MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">1800789456</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-envelope text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">info@stackly.com</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-clock text-gold"></i>
+              <span>Mon - Sun: 7:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Map -->
+        <div class="footer-col footer-map-col">
+          <h4>Location Map</h4>
+          <div class="footer-map-wrapper">
+            <iframe 
+              title="Stackly Bakery Salem Location"
+              src="https://maps.google.com/maps?q=Stackly,%20MMR%20Complex,%20Chinna%20Thirupathi,%20Salem,%20Tamil%20Nadu%20636008&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="404.html" class="footer-map-btn">
+              <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Le Petit Four Artisan Bakery. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Food Hygiene Certificate</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Single Master Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

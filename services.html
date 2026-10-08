@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Services & Catering | Le Petit Four</title>
+  <meta name="description" content="Explore our bespoke custom cake studio, corporate dessert catering, gift boxes, fresh breakfast subscriptions, and climate-controlled delivery.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/service.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="bakery-navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="nav-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="404.html" class="nav-action-btn" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="404.html" class="nav-action-btn cart-toggle-btn" title="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="nav-badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" class="btn btn-sm btn-primary d-none-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="mobile-drawer-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="mobile-drawer-logo">
+      </a>
+      <button class="mobile-drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link active"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </div>
+  <div class="nav-backdrop"></div>
+
+  <!-- ==================== BANNER ==================== -->
+  <div class="page-banner banner-services">
+    <div class="container">
+      <span class="section-tag" style="background: rgba(255,255,255,0.15); color: #FFFFFF;"><i class="fa-solid fa-bell-concierge text-gold"></i> Artisanal Offerings</span>
+      <h1>Our Bakery Services & Catering</h1>
+      <p>From bespoke celebration cakes and full dessert table catering to weekly doorstep breakfast subscriptions.</p>
+
+      <!-- Service Value Guarantees Ribbon -->
+      <div class="banner-guarantees-strip">
+        <div class="banner-guarantee-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <strong>100% Fresh Daily Bake</strong>
+            <small>Crafted from scratch every dawn</small>
+          </div>
+        </div>
+        <div class="banner-guarantee-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div>
+            <strong>Climate-Chilled Vans</strong>
+            <small>Cushioned tiered cake transit</small>
+          </div>
+        </div>
+        <div class="banner-guarantee-item">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <div>
+            <strong>Free 3D Cake Mockup</strong>
+            <small>Full structural blueprint design</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Milestone Stats Strip -->
+      <div class="banner-stats-strip">
+        <div class="banner-stat-cell">
+          <strong>500+</strong>
+          <span>Bespoke Cakes</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>200+</strong>
+          <span>Events Catered</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>100%</strong>
+          <span>Cold-Chain Transit</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>24h</strong>
+          <span>Express Booking</span>
+        </div>
+      </div>
+      
+      <!-- Feature Highlights -->
+      <div class="banner-feature-pills">
+        <span class="banner-pill"><i class="fa-solid fa-cake-candles text-gold"></i> Custom Tier Cakes</span>
+        <span class="banner-pill"><i class="fa-solid fa-champagne-glasses text-gold"></i> Event Catering</span>
+        <span class="banner-pill"><i class="fa-solid fa-repeat text-gold"></i> Doorstep Subscriptions</span>
+        <span class="banner-pill"><i class="fa-solid fa-clock text-gold"></i> 24h Express Bake</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="banner-actions">
+        <a href="404.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-wand-magic-sparkles"></i> Custom Cakes</a>
+        <a href="404.html" class="btn btn-white btn-sm"><i class="fa-solid fa-building-user"></i> Event Catering</a>
+        <a href="404.html" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.45);"><i class="fa-solid fa-envelope"></i> Request Quote</a>
+        <a href="404.html" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.45);"><i class="fa-solid fa-building"></i> B2B Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== A. CUSTOM CAKE DESIGN ==================== -->
+  <section class="section" id="custom-cakes-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bespoke Cake Studio</span>
+        <h2>Custom Cake Creations</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-cake-candles"></i><span></span></div>
+        <p>Every celebration deserves a show-stopping centerpiece crafted with edible gold, artisanal macarons, and handcrafted sugar botanicals.</p>
+      </div>
+
+      <div class="custom-cake-grid">
+        <!-- Cake 1 -->
+        <div class="cake-type-card">
+          <div class="cake-type-img">
+            <img src="assets/custom-cake-hero.webp" alt="Wedding Cake Design">
+          </div>
+          <div class="cake-type-body">
+            <h4>Grand Wedding Cakes</h4>
+            <p>Multi-tiered architectural masterpieces with silk buttercream, delicate sugar florals, and custom flavor pairings.</p>
+            <div class="cake-flavor-tags">
+              <span class="flavor-tag">Champagne & Berry</span>
+              <span class="flavor-tag">Earl Grey Lavender</span>
+              <span class="flavor-tag">Belgian Ganache</span>
+            </div>
+            <div class="cake-type-footer">
+              <div class="cake-starting-price">From <strong>$150.00</strong></div>
+              <a href="404.html" class="btn btn-sm btn-primary">Request Cake</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 2 -->
+        <div class="cake-type-card">
+          <div class="cake-type-img">
+            <img src="assets/wedding-cake.webp" alt="Birthday Cake">
+          </div>
+          <div class="cake-type-body">
+            <h4>Bespoke Birthday Cakes</h4>
+            <p>Playful, modern, and customized with personalized piping, edible luster, and gourmet macarons.</p>
+            <div class="cake-flavor-tags">
+              <span class="flavor-tag">Funfetti Vanilla</span>
+              <span class="flavor-tag">Salted Caramel</span>
+              <span class="flavor-tag">Choc Fudge</span>
+            </div>
+            <div class="cake-type-footer">
+              <div class="cake-starting-price">From <strong>$65.00</strong></div>
+              <a href="404.html" class="btn btn-sm btn-primary">Request Cake</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 3 -->
+        <div class="cake-type-card">
+          <div class="cake-type-img">
+            <img src="assets/sourdough-bread.webp" alt="Anniversary Cake">
+          </div>
+          <div class="cake-type-body">
+            <h4>Anniversary & Milestone Cakes</h4>
+            <p>Romantic and elegant designs featuring hand-painted botanical illustrations and velvety mousse fillings.</p>
+            <div class="cake-flavor-tags">
+              <span class="flavor-tag">Red Velvet Rose</span>
+              <span class="flavor-tag">Dark Truffle</span>
+              <span class="flavor-tag">Pistachio Cream</span>
+            </div>
+            <div class="cake-type-footer">
+              <div class="cake-starting-price">From <strong>$75.00</strong></div>
+              <a href="404.html" class="btn btn-sm btn-primary">Request Cake</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 4 -->
+        <div class="cake-type-card">
+          <div class="cake-type-img">
+            <img src="assets/corporate-catering.webp" alt="Theme Cakes">
+          </div>
+          <div class="cake-type-body">
+            <h4>Creative Theme Cakes</h4>
+            <p>Sculpted 3D novelty cakes for themed gatherings, movie nights, pop culture milestones, and kids' dreams.</p>
+            <div class="cake-flavor-tags">
+              <span class="flavor-tag">Custom Flavors</span>
+              <span class="flavor-tag">Sculpted Fondant</span>
+              <span class="flavor-tag">3D Art</span>
+            </div>
+            <div class="cake-type-footer">
+              <div class="cake-starting-price">From <strong>$90.00</strong></div>
+              <a href="404.html" class="btn btn-sm btn-primary">Request Cake</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 5 -->
+        <div class="cake-type-card">
+          <div class="cake-type-img">
+            <img src="assets/workshop-class.webp" alt="Photo Cakes">
+          </div>
+          <div class="cake-type-body">
+            <h4>Edible Photo & Logo Cakes</h4>
+            <p>Ultra-high definition edible wafer printing for family portraits, corporate logos, and celebratory moments.</p>
+            <div class="cake-flavor-tags">
+              <span class="flavor-tag">Edible Print</span>
+              <span class="flavor-tag">Vanilla Bean</span>
+              <span class="flavor-tag">Mocha Swirl</span>
+            </div>
+            <div class="cake-type-footer">
+              <div class="cake-starting-price">From <strong>$55.00</strong></div>
+              <a href="404.html" class="btn btn-sm btn-primary">Request Cake</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 6 -->
+        <div class="cake-type-card">
+          <div class="cake-type-img">
+            <img src="assets/cheesecake.webp" alt="Corporate Cakes">
+          </div>
+          <div class="cake-type-body">
+            <h4>Corporate Gala Cakes</h4>
+            <p>Sophisticated branded centerpiece cakes for annual galas, product launches, and brand anniversaries.</p>
+            <div class="cake-flavor-tags">
+              <span class="flavor-tag">Brand Colors</span>
+              <span class="flavor-tag">Gold Leaf</span>
+              <span class="flavor-tag">Bulk Platters</span>
+            </div>
+            <div class="cake-type-footer">
+              <div class="cake-starting-price">From <strong>$120.00</strong></div>
+              <a href="404.html" class="btn btn-sm btn-primary">Request Cake</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Cake Estimator Box -->
+      <div class="estimator-card">
+        <div class="estimator-header">
+          <h3><i class="fa-solid fa-calculator text-accent"></i> Instant Custom Cake Price Estimator</h3>
+          <p>Configure your cake parameters below for a fast real-time price estimate.</p>
+        </div>
+        <div class="estimator-grid">
+          <div class="form-group">
+            <label class="form-label">Occasion / Style</label>
+            <select class="form-control" id="est-type">
+              <option value="15">Birthday Cake (+ $15)</option>
+              <option value="60">Multi-Tier Wedding (+ $60)</option>
+              <option value="25">Anniversary Gateau (+ $25)</option>
+              <option value="40">Corporate Sculpted (+ $40)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Flavor Profile</label>
+            <select class="form-control" id="est-flavor">
+              <option value="0">Classic Madagascar Vanilla ($0)</option>
+              <option value="10">Belgian Truffle Ganache (+ $10)</option>
+              <option value="12">Red Velvet & Cream Cheese (+ $12)</option>
+              <option value="15">Pistachio & Raspberry Rose (+ $15)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Cake Size / Servings</label>
+            <select class="form-control" id="est-size">
+              <option value="10">Small (6-8 Servings / 6")</option>
+              <option value="25" selected>Medium (12-16 Servings / 8")</option>
+              <option value="45">Large (20-25 Servings / 10")</option>
+              <option value="80">Grand Event (40+ Servings)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Number of Tiers</label>
+            <select class="form-control" id="est-tiers">
+              <option value="1" selected>Single Tier (1x)</option>
+              <option value="2">2 Tiers (+60%)</option>
+              <option value="3">3 Tiers Grand (+130%)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="estimator-total-bar">
+          <div class="estimator-price-display">
+            <span>Estimated Price:</span>
+            <strong id="est-price-total">$70.00</strong>
+          </div>
+          <a href="404.html" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Book Custom Order With This Spec
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== B. EVENT & PARTY CATERING ==================== -->
+  <section class="section section-alt" id="catering-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Celebrations</span>
+        <h2>Event & Party Dessert Catering</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-champagne-glasses"></i><span></span></div>
+        <p>Full-service bakery tables, tiered stands, and live pastry styling for gatherings of 20 to 1,000 guests.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="event-service-card">
+          <div class="event-icon-box"><i class="fa-solid fa-cake-candles"></i></div>
+          <h4>Birthday Celebrations</h4>
+          <p>Themed cupcake towers, personalized cookie favors, mini tart assortments, and a centerpiece celebration cake.</p>
+          <ul class="event-feature-list">
+            <li><i class="fa-solid fa-check"></i> Centerpiece Birthday Cake</li>
+            <li><i class="fa-solid fa-check"></i> Custom Cupcakes & Donuts</li>
+            <li><i class="fa-solid fa-check"></i> Individual Treat Goodie Bags</li>
+          </ul>
+          <a href="404.html" class="btn btn-sm btn-outline" style="width: 100%;">Inquire Party Package</a>
+        </div>
+
+        <div class="event-service-card">
+          <div class="event-icon-box"><i class="fa-solid fa-ring"></i></div>
+          <h4>Luxury Wedding Dessert Tables</h4>
+          <p>Lavish Parisian dessert stations with French macarons, mini eclairs, chocolate truffles, and wedding cake cutting service.</p>
+          <ul class="event-feature-list">
+            <li><i class="fa-solid fa-check"></i> Tiered Wedding Cake</li>
+            <li><i class="fa-solid fa-check"></i> Macaron Pyramids & Tarts</li>
+            <li><i class="fa-solid fa-check"></i> On-Site Pastry Chef Styling</li>
+          </ul>
+          <a href="404.html" class="btn btn-sm btn-outline" style="width: 100%;">Inquire Wedding Table</a>
+        </div>
+
+        <div class="event-service-card">
+          <div class="event-icon-box"><i class="fa-solid fa-building"></i></div>
+          <h4>Corporate Galas & Meetings</h4>
+          <p>Artisanal morning breakfast platters, afternoon tea tiers, branded bonbons, and VIP gift boxes delivered on time.</p>
+          <ul class="event-feature-list">
+            <li><i class="fa-solid fa-check"></i> Fresh Morning Viennoiserie</li>
+            <li><i class="fa-solid fa-check"></i> Logo Branded Pastries</li>
+            <li><i class="fa-solid fa-check"></i> Invoiced Corporate Billing</li>
+          </ul>
+          <a href="404.html" class="btn btn-sm btn-outline" style="width: 100%;">Corporate Portal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== C. BAKERY DELIVERY 5-STEP PROCESS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Care In Transit</span>
+        <h2>Our 5-Step Delivery Promise</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-truck-fast"></i><span></span></div>
+        <p>From oven bake to doorstep handover, your delicate pastries and multi-tier cakes are handled with gentle precision.</p>
+      </div>
+
+      <div class="delivery-steps-grid">
+        <div class="delivery-step-card">
+          <div class="step-num-badge">1</div>
+          <div class="step-icon-wrap"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h5>Order Placed</h5>
+          <p>Ingredients scheduled and custom design approved by chef.</p>
+        </div>
+
+        <div class="delivery-step-card">
+          <div class="step-num-badge">2</div>
+          <div class="step-icon-wrap"><i class="fa-solid fa-fire-burner"></i></div>
+          <h5>Artisan Baking</h5>
+          <p>Baked fresh on the morning of dispatch using organic butter.</p>
+        </div>
+
+        <div class="delivery-step-card">
+          <div class="step-num-badge">3</div>
+          <div class="step-icon-wrap"><i class="fa-solid fa-box"></i></div>
+          <h5>Custom Packing</h5>
+          <p>Shock-absorbent, climate-insulated luxury boxes with ribbon.</p>
+        </div>
+
+        <div class="delivery-step-card">
+          <div class="step-num-badge">4</div>
+          <div class="step-icon-wrap"><i class="fa-solid fa-van-shuttle"></i></div>
+          <h5>Climate Dispatch</h5>
+          <p>Chilled specialized delivery vans with real-time GPS tracking.</p>
+        </div>
+
+        <div class="delivery-step-card">
+          <div class="step-num-badge">5</div>
+          <div class="step-icon-wrap"><i class="fa-solid fa-house-chimney-user"></i></div>
+          <h5>White-Glove Delivery</h5>
+          <p>Gentle handover to your doorstep or event venue table setup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== D. CATERING PACKAGES ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Group Bundles</span>
+        <h2>Curated Catering Packages</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-utensils"></i><span></span></div>
+        <p>Designed for easy planning and crowd-pleasing variety for corporate gatherings and intimate family brunches.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="event-service-card">
+          <h4>Artisan Breakfast Platter</h4>
+          <p>Feeds 12-15 guests. 15 mini butter croissants, 10 pain au chocolat, 8 fruit danishes, and churned butter with house jam.</p>
+          <div class="cake-starting-price" style="margin-bottom: 1rem;">Package Price: <strong>$68.00</strong></div>
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.Bakery.addToCart('prod-3', 2)">
+            <i class="fa-solid fa-cart-plus"></i> Add Breakfast Box
+          </button>
+        </div>
+
+        <div class="event-service-card">
+          <h4>Petite Dessert Table Package</h4>
+          <p>Feeds 20-25 guests. 24 assorted Parisian macarons, 16 mini chocolate tarts, 16 lemon meringue bites, and 12 cake pops.</p>
+          <div class="cake-starting-price" style="margin-bottom: 1rem;">Package Price: <strong>$115.00</strong></div>
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.Bakery.addToCart('prod-6', 2)">
+            <i class="fa-solid fa-cart-plus"></i> Add Dessert Platter
+          </button>
+        </div>
+
+        <div class="event-service-card">
+          <h4>Grand Celebration Platter</h4>
+          <p>Feeds 40+ guests. Full dessert extravaganza with 40 macarons, 24 gourmet cupcakes, 20 chocolate truffles, and brownie bites.</p>
+          <div class="cake-starting-price" style="margin-bottom: 1rem;">Package Price: <strong>$195.00</strong></div>
+          <a href="404.html" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-solid fa-envelope"></i> Book Grand Platter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== E. LUXURY GIFT BOXES ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Thoughtful Giving</span>
+        <h2>Luxury Bakery Gift Boxes</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-gift"></i><span></span></div>
+        <p>Elegantly packaged in velvet-touch embossed boxes, tied with silk ribbon and a handwritten wax-sealed card.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Gift Box 1 -->
+        <div class="gift-box-card">
+          <div class="gift-box-img">
+            <img src="assets/french-macarons.webp" alt="Macaron Gift Box">
+            <span class="gift-box-ribbon">Bestseller</span>
+          </div>
+          <div class="gift-box-content">
+            <h4>Royal Macaron Gift Box</h4>
+            <ul class="gift-box-items-list">
+              <li><i class="fa-solid fa-check"></i> 16 Assorted Parisian Macarons</li>
+              <li><i class="fa-solid fa-check"></i> Gold-Foil Embossed Gift Box</li>
+              <li><i class="fa-solid fa-check"></i> Handwritten Calligraphy Card</li>
+            </ul>
+            <div class="gift-box-footer">
+              <span class="gift-box-price">$38.00</span>
+              <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-6')">Order Box</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift Box 2 -->
+        <div class="gift-box-card">
+          <div class="gift-box-img">
+            <img src="assets/dessert-table.webp" alt="Chocolate Truffle Box">
+            <span class="gift-box-ribbon">Artisan</span>
+          </div>
+          <div class="gift-box-content">
+            <h4>Valrhona Truffle Collection</h4>
+            <ul class="gift-box-items-list">
+              <li><i class="fa-solid fa-check"></i> 18 Single-Origin Dark Truffles</li>
+              <li><i class="fa-solid fa-check"></i> Hazelnut Praline & Sea Salt</li>
+              <li><i class="fa-solid fa-check"></i> Velvet Ribbon Packaging</li>
+            </ul>
+            <div class="gift-box-footer">
+              <span class="gift-box-price">$44.00</span>
+              <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-2')">Order Box</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift Box 3 -->
+        <div class="gift-box-card">
+          <div class="gift-box-img">
+            <img src="assets/chocolate-eclair.webp" alt="Cupcake Box">
+            <span class="gift-box-ribbon">Celebration</span>
+          </div>
+          <div class="gift-box-content">
+            <h4>Velvet Birthday Treat Box</h4>
+            <ul class="gift-box-items-list">
+              <li><i class="fa-solid fa-check"></i> 6 Madagascar Vanilla Cupcakes</li>
+              <li><i class="fa-solid fa-check"></i> Mini Sparkler & Gold Candles</li>
+              <li><i class="fa-solid fa-check"></i> Birthday Message Ribbon</li>
+            </ul>
+            <div class="gift-box-footer">
+              <span class="gift-box-price">$29.00</span>
+              <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-4')">Order Box</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift Box 4 -->
+        <div class="gift-box-card">
+          <div class="gift-box-img">
+            <img src="assets/choc-cookies.webp" alt="Cookie Box">
+            <span class="gift-box-ribbon">Family</span>
+          </div>
+          <div class="gift-box-content">
+            <h4>Grand Cookie Tin</h4>
+            <ul class="gift-box-items-list">
+              <li><i class="fa-solid fa-check"></i> 12 Molten Sea Salt Choc Cookies</li>
+              <li><i class="fa-solid fa-check"></i> Keepsake Embossed Metal Tin</li>
+              <li><i class="fa-solid fa-check"></i> Fresh Crisp Vacuum Seal</li>
+            </ul>
+            <div class="gift-box-footer">
+              <span class="gift-box-price">$24.00</span>
+              <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-8')">Order Box</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== F. SUBSCRIPTION BAKERY SERVICE ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fresh Bread Every Morning</span>
+        <h2>Artisan Bakery Subscriptions</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-repeat"></i><span></span></div>
+        <p>Wake up to warm slow-fermented sourdoughs and flaky French viennoiseries delivered right to your front door.</p>
+      </div>
+
+      <!-- Billing Period Switcher -->
+      <div class="sub-billing-switcher">
+        <div class="switcher-pill">
+          <button id="sub-weekly-btn" class="active">Weekly Plan</button>
+          <button id="sub-monthly-btn">Monthly Plan (Save 15%)</button>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <!-- Plan 1 -->
+        <div class="sub-plan-card" data-weekly="18" data-monthly="65">
+          <h4>Weekly Bread Basket</h4>
+          <p class="sub-plan-desc">For sourdough purists and daily sandwich lovers.</p>
+          <div class="sub-plan-price">$18 <span>/ week</span></div>
+          <ul class="sub-plan-features">
+            <li><i class="fa-solid fa-check"></i> 2 Artisan Sourdough Loaves</li>
+            <li><i class="fa-solid fa-check"></i> 1 Fresh French Baguette</li>
+            <li><i class="fa-solid fa-check"></i> Free Saturday Morning Delivery</li>
+            <li><i class="fa-solid fa-check"></i> Pause or Cancel Anytime</li>
+          </ul>
+          <button class="btn btn-outline" onclick="window.Bakery.showToast('Subscribed to Weekly Bread Basket!', 'success')">Subscribe Now</button>
+        </div>
+
+        <!-- Plan 2 (Featured) -->
+        <div class="sub-plan-card featured-plan" data-weekly="32" data-monthly="115">
+          <span class="sub-plan-badge">Most Popular</span>
+          <h4>Weekend Patisserie Box</h4>
+          <p class="sub-plan-desc">The ultimate gourmet weekend breakfast experience for families.</p>
+          <div class="sub-plan-price">$32 <span>/ week</span></div>
+          <ul class="sub-plan-features">
+            <li><i class="fa-solid fa-check"></i> 1 Sourdough Loaf of Choice</li>
+            <li><i class="fa-solid fa-check"></i> 4 French Butter Croissants</li>
+            <li><i class="fa-solid fa-check"></i> 2 Pain au Chocolat</li>
+            <li><i class="fa-solid fa-check"></i> 1 Seasonal Jam Jar</li>
+            <li><i class="fa-solid fa-check"></i> Priority 7:00 AM Delivery</li>
+          </ul>
+          <button class="btn btn-primary" onclick="window.Bakery.showToast('Subscribed to Weekend Patisserie Box!', 'success')">Subscribe Now</button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="sub-plan-card" data-weekly="48" data-monthly="175">
+          <h4>Chef's Connoisseur Club</h4>
+          <p class="sub-plan-desc">Exclusive seasonal pastries, dessert tastings, and monthly cake slice.</p>
+          <div class="sub-plan-price">$48 <span>/ week</span></div>
+          <ul class="sub-plan-features">
+            <li><i class="fa-solid fa-check"></i> 2 Sourdough Heritage Loaves</li>
+            <li><i class="fa-solid fa-check"></i> 6 Assorted Viennoiseries</li>
+            <li><i class="fa-solid fa-check"></i> 6 Parisian Macarons</li>
+            <li><i class="fa-solid fa-check"></i> 1 Baker's Surprise Dessert</li>
+            <li><i class="fa-solid fa-check"></i> VIP 15% In-Store Discount</li>
+          </ul>
+          <button class="btn btn-outline" onclick="window.Bakery.showToast('Subscribed to Connoisseur Club!', 'success')">Subscribe Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL CART & QUICK VIEW MODALS ==================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-accent"></i> Your Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-drawer-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div class="cart-summary-row"><span>Estimated Delivery</span><span id="cart-delivery">$0.00</span></div>
+      <div class="cart-total-row"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='404.html';">
+        <i class="fa-solid fa-lock"></i> Checkout Now
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="window.Bakery.closeQuickView()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-grid">
+        <div class="quickview-media"><img src="" alt="" class="quickview-img"></div>
+        <div class="quickview-details">
+          <div class="quickview-badge-wrap"><span class="badge badge-gold quickview-cat-val">Category</span></div>
+          <h3 class="quickview-title">Product Title</h3>
+          <div class="quickview-price-rating">
+            <span class="quickview-price">$0.00</span>
+            <div class="product-rating" style="margin: 0;">
+              <span class="stars" style="color: #F59E0B;"><i class="fa-solid fa-star"></i></span>
+              <strong class="quickview-rating-val" style="margin-left: 4px;">4.9</strong>
+              <span class="rating-count quickview-reviews-val">(0 reviews)</span>
+            </div>
+          </div>
+          <p class="quickview-desc">Description placeholder</p>
+          <div class="quickview-meta-list">
+            <div><strong>Availability:</strong> Fresh In Stock (Baked Daily)</div>
+            <div><strong>Storage:</strong> Store at 18-20°C in cool dry place</div>
+          </div>
+          <div class="quickview-actions">
+            <div class="qty-input-group">
+              <button onclick="let q=document.getElementById('quickview-qty'); if(q.value>1)q.value--;">-</button>
+              <input type="number" id="quickview-qty" value="1" min="1" max="50">
+              <button onclick="let q=document.getElementById('quickview-qty'); q.value++;">+</button>
+            </div>
+            <button class="btn btn-primary modal-add-cart-btn" style="flex-grow: 1;">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bakery-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 0.5rem;">
+            <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="footer-brand-logo">
+          </a>
+          <p>Handcrafted European sourdoughs, viennoiseries, custom event cakes, and fine chocolate bonbons baked fresh every morning.</p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Bakery</h4>
+          <div class="footer-links">
+            <a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a>
+            <a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a>
+            <a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a>
+            <a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+        <!-- Shop Links -->
+        <div class="footer-col">
+          <h4>Shop Fresh</h4>
+          <div class="footer-links">
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Celebration Cakes</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Artisan Sourdough</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> French Pastries</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Gourmet Cookies</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Macarons & Desserts</a>
+          </div>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="footer-col footer-contact">
+          <h4>Visit & Contact Us</h4>
+          <div style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.8);">
+            <div style="display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-location-dot text-gold" style="margin-top: 4px; font-size: 0.95rem;"></i>
+              <span style="line-height: 1.5;">MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">1800789456</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-envelope text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">info@stackly.com</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-clock text-gold"></i>
+              <span>Mon - Sun: 7:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Map -->
+        <div class="footer-col footer-map-col">
+          <h4>Location Map</h4>
+          <div class="footer-map-wrapper">
+            <iframe 
+              title="Stackly Bakery Salem Location"
+              src="https://maps.google.com/maps?q=Stackly,%20MMR%20Complex,%20Chinna%20Thirupathi,%20Salem,%20Tamil%20Nadu%20636008&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="404.html" class="footer-map-btn">
+              <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Le Petit Four Artisan Bakery. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Food Hygiene Certificate</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

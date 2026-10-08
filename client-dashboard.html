@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client & Event Catering Portal | Le Petit Four</title>
+  <meta name="description" content="Dedicated portal for corporate clients, event planners, and bulk bakery orders. Manage catering schedules, multi-tier custom cakes, and invoicing.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/client-dashboard.css">
+</head>
+<body>
+
+  <!-- ==================== CLIENT DASHBOARD LAYOUT ==================== -->
+  <div class="client-layout">
+    <!-- CLIENT DASHBOARD SIDEBAR -->
+    <aside class="client-sidebar">
+      <!-- Sidebar Brand Header -->
+      <div class="sidebar-brand-box">
+        <a href="index.html" title="Back to Home">
+          <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" style="height: 42px; object-fit: contain;">
+        </a>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close sidebar menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="client-menu-list">
+        <a href="#overview" class="sidebar-nav-item active"><i class="fa-solid fa-chart-pie"></i> <span>Overview</span></a>
+        <a href="#event-orders" class="sidebar-nav-item"><i class="fa-solid fa-receipt"></i> <span>Event & Catering Orders</span> <span class="badge-count">28</span></a>
+        <a href="#invoicing" class="sidebar-nav-item"><i class="fa-solid fa-file-invoice-dollar"></i> <span>Invoicing & Financials</span></a>
+        <a href="#offers" class="sidebar-nav-item"><i class="fa-solid fa-percent"></i> <span>Corporate Offers & Tiers</span></a>
+        <a href="#settings" class="sidebar-nav-item"><i class="fa-solid fa-sliders"></i> <span>Settings & Billing</span></a>
+      </nav>
+
+      <!-- Sidebar Bottom Logout Section -->
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-logout-btn" onclick="localStorage.removeItem('bakery_user_role'); localStorage.removeItem('bakery_user_email'); localStorage.removeItem('bakery_user_name'); localStorage.removeItem('bakery_first_name');" title="Logout from account">
+          <div class="logout-icon-wrap">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </div>
+          <span>Logout Account</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- CLIENT MAIN CONTENT -->
+    <main class="client-main">
+      <!-- TOPBAR NAVIGATION ROW -->
+      <div class="dashboard-topbar">
+        <div class="dashboard-topbar-left">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="index.html" class="dashboard-mobile-logo" title="Back to Home">
+            <img src="assets/logo.webp" alt="Stackly Bakery">
+          </a>
+        </div>
+        
+        <div class="dashboard-topbar-right">
+          <a href="404.html" class="topbar-icon-btn" title="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="topbar-icon-badge"></span>
+          </a>
+          <a href="404.html" class="btn btn-sm btn-outline desktop-only-btn">Customer View</a>
+          <a href="404.html" class="btn btn-sm btn-primary desktop-only-btn">
+            <i class="fa-solid fa-plus"></i> New Booking
+          </a>
+          <a href="404.html" class="topbar-user-profile" title="View Profile">
+            <div class="topbar-avatar-circle" id="client-avatar-initial">A</div>
+            <div class="topbar-user-info">
+              <h4 id="client-topbar-email">accounts@grandelysee.com</h4>
+              <span class="topbar-user-badge" id="client-topbar-role">Client / B2B</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- PAGE TITLE HEADER -->
+      <div class="dashboard-page-header">
+        <h2>Corporate Event Hub <i class="fa-solid fa-building text-accent"></i></h2>
+        <p>Manage high-volume catering bookings, custom tier blueprints, and wholesale deliveries.</p>
+      </div>
+
+      <!-- ==================== TAB 1: OVERVIEW ==================== -->
+      <section class="client-tab-content active" id="overview">
+        <!-- Executive B2B Stats Grid -->
+        <div class="spending-stats-grid">
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Total Orders Placed</span>
+              <div class="stat-card-badge"><i class="fa-solid fa-receipt"></i></div>
+            </div>
+            <div class="spending-amount">28</div>
+            <p class="stat-trend-sub"><i class="fa-solid fa-arrow-trend-up"></i> Lifetime corporate bookings</p>
+          </div>
+
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Active Productions</span>
+              <div class="stat-card-badge" style="background: rgba(200, 131, 52, 0.15); color: var(--accent-caramel);"><i class="fa-solid fa-fire-burner"></i></div>
+            </div>
+            <div class="spending-amount" style="color: var(--accent-caramel);">3</div>
+            <p class="stat-trend-sub"><i class="fa-solid fa-circle-check"></i> Currently in kitchen prep</p>
+          </div>
+
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Upcoming Events</span>
+              <div class="stat-card-badge" style="background: rgba(59, 130, 246, 0.15); color: #3B82F6;"><i class="fa-solid fa-calendar-check"></i></div>
+            </div>
+            <div class="spending-amount">2</div>
+            <p class="stat-trend-sub"><i class="fa-solid fa-calendar-day"></i> Next: Oct 12 Autumn Gala</p>
+          </div>
+
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Total Spending</span>
+              <div class="stat-card-badge" style="background: rgba(16, 185, 129, 0.15); color: #10B981;"><i class="fa-solid fa-wallet"></i></div>
+            </div>
+            <div class="spending-amount">$8,450.00</div>
+            <p class="stat-trend-sub stat-trend-positive"><i class="fa-solid fa-arrow-trend-up"></i> Tier: Platinum B2B (15% Off)</p>
+          </div>
+        </div>
+
+        <!-- Quick Actions Bar -->
+        <div class="quick-actions-bar">
+          <a href="404.html" class="quick-action-card">
+            <div class="quick-action-icon"><i class="fa-solid fa-plus"></i></div>
+            <div class="quick-action-info">
+              <h5>New Booking</h5>
+              <span>Reserve catering date</span>
+            </div>
+          </a>
+          <div class="quick-action-card" data-tab-target="#event-orders">
+            <div class="quick-action-icon"><i class="fa-solid fa-receipt"></i></div>
+            <div class="quick-action-info">
+              <h5>Event Orders</h5>
+              <span>28 catering manifests</span>
+            </div>
+          </div>
+          <div class="quick-action-card" data-tab-target="#invoicing">
+            <div class="quick-action-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div class="quick-action-info">
+              <h5>Net-30 Invoices</h5>
+              <span>Download tax receipts</span>
+            </div>
+          </div>
+          <div class="quick-action-card" data-tab-target="#offers">
+            <div class="quick-action-icon"><i class="fa-solid fa-percent"></i></div>
+            <div class="quick-action-info">
+              <h5>Corporate Offers</h5>
+              <span>View B2B benefits</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Production Banner -->
+        <div class="progress-tracker-box">
+          <div class="progress-tracker-title">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-fire text-accent"></i> Active Kitchen Production: Annual Autumn Gala (#EVT-4028)</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Event Date: Oct 12, 2026 • 200 Guests Dessert Platter & 3-Tier Gold Gateau</span>
+            </div>
+            <span class="order-status-badge status-baking">Baking in Progress</span>
+          </div>
+
+          <div class="client-progress-stages">
+            <div class="stage-card completed">
+              <div class="stage-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="stage-name">1. Confirmed</div>
+              <span style="font-size: 0.72rem; color: #10B981;">Contract Signed</span>
+            </div>
+            <div class="stage-card completed">
+              <div class="stage-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="stage-name">2. Sourcing</div>
+              <span style="font-size: 0.72rem; color: #10B981;">Ingredients Prepped</span>
+            </div>
+            <div class="stage-card active">
+              <div class="stage-icon"><i class="fa-solid fa-fire"></i></div>
+              <div class="stage-name">3. Baking & Decor</div>
+              <span style="font-size: 0.72rem; color: var(--accent-caramel);">Tier Assembly</span>
+            </div>
+            <div class="stage-card">
+              <div class="stage-icon"><i class="fa-solid fa-box"></i></div>
+              <div class="stage-name">4. Packaging</div>
+              <span style="font-size: 0.72rem; color: var(--text-light);">Cushioned Crates</span>
+            </div>
+            <div class="stage-card">
+              <div class="stage-icon"><i class="fa-solid fa-truck"></i></div>
+              <div class="stage-name">5. Venue Delivery</div>
+              <span style="font-size: 0.72rem; color: var(--text-light);">Direct Setup</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
+            <button class="btn btn-sm btn-primary" data-tab-target="#event-orders">
+              <i class="fa-solid fa-receipt"></i> View Event Manifest
+            </button>
+          </div>
+        </div>
+
+        <!-- Recent Activity Feed -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <h3><i class="fa-solid fa-timeline text-accent"></i> Recent Corporate Activity Log</h3>
+          </div>
+          <div class="activity-feed">
+            <div class="activity-item">
+              <div class="activity-dot"></div>
+              <div class="activity-content">
+                <h5>Baking Started for Oct 12 Gala Cake</h5>
+                <p>Chef Claire completed sponge layers & infused champagne compote for 3 tiers.</p>
+                <span class="activity-time">2 hours ago</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-dot"></div>
+              <div class="activity-content">
+                <h5>Net-30 Invoice #INV-8820 Approved</h5>
+                <p>Payment confirmed for Summer Brand Launch catering statement ($1,420.00).</p>
+                <span class="activity-time">Yesterday at 4:15 PM</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-dot"></div>
+              <div class="activity-content">
+                <h5>Weekly Monday Breakfast Dispatched</h5>
+                <p>50 croissants and viennoiseries delivered to Downtown Office Loading Bay.</p>
+                <span class="activity-time">Oct 6 at 7:25 AM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 2: EVENT & CATERING ORDERS ==================== -->
+      <section class="client-tab-content" id="event-orders">
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-champagne-glasses text-accent"></i> Event & Catering Bookings</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">28 Bookings Total • 2,400+ Guests Catered • 100% On-Time Venue Delivery</span>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Book New Event</a>
+          </div>
+
+          <!-- Order Filter Toolbar -->
+          <div class="order-filter-toolbar">
+            <div class="order-filter-group">
+              <button class="order-filter-btn active" data-filter="all">All (28)</button>
+              <button class="order-filter-btn" data-filter="baking">In Production (1)</button>
+              <button class="order-filter-btn" data-filter="preparing">Confirmed (2)</button>
+              <button class="order-filter-btn" data-filter="delivered">Delivered (25)</button>
+            </div>
+            <div style="position: relative;">
+              <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.85rem;"></i>
+              <input type="text" class="order-search-input" placeholder="Search event, booking ID...">
+            </div>
+          </div>
+
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Event Date</th>
+                  <th>Catering Package</th>
+                  <th>Guest Count</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="baking">
+                  <td><strong>Annual Autumn Gala</strong></td>
+                  <td>Oct 12, 2026</td>
+                  <td>Full Dessert Station + 3-Tier Gateau</td>
+                  <td>200 Guests</td>
+                  <td><strong>$1,850.00</strong></td>
+                  <td><span class="order-status-badge status-baking">In Baking</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-primary" onclick="window.Bakery.showToast('Event brief #EVT-4028 opened', 'info');">Brief</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Chef notes opened', 'info');">Chef Notes</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="preparing">
+                  <td><strong>Tech Leaders Breakfast Summit</strong></td>
+                  <td>Oct 24, 2026</td>
+                  <td>Artisan Breakfast Viennoiserie (80 pcs)</td>
+                  <td>60 Guests</td>
+                  <td><strong>$520.00</strong></td>
+                  <td><span class="order-status-badge status-preparing">Confirmed</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Schedule modified', 'info');">Edit</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Order manifest opened', 'info');">Roster</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="preparing">
+                  <td><strong>Executive Brand Showcase</strong></td>
+                  <td>Nov 05, 2026</td>
+                  <td>Bespoke 2-Tier Cake + Macaron Tower</td>
+                  <td>90 Guests</td>
+                  <td><strong>$780.00</strong></td>
+                  <td><span class="order-status-badge status-preparing">Confirmed</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Custom blueprint PDF opened', 'info');">Blueprint</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Deposit receipt downloaded', 'success');">Deposit</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="delivered">
+                  <td><strong>Summer Brand Launch</strong></td>
+                  <td>Aug 15, 2026</td>
+                  <td>Branded Macaron Pyramids & Tarts</td>
+                  <td>150 Guests</td>
+                  <td><strong>$1,420.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Delivered</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Reordering package for next season', 'info');">Reorder</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Invoice #INV-8820 downloaded', 'success');">Invoice</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="delivered">
+                  <td><strong>Financial Quarter Banquet</strong></td>
+                  <td>Jul 10, 2026</td>
+                  <td>Dessert Buffet & Chocolate Bonbons</td>
+                  <td>100 Guests</td>
+                  <td><strong>$980.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Delivered</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Invoice #INV-8650 downloaded', 'success');">Invoice</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 3: INVOICING & FINANCIALS ==================== -->
+      <section class="client-tab-content" id="invoicing">
+        <!-- Financial Metrics -->
+        <div class="spending-stats-grid">
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Outstanding Balance</span>
+              <i class="fa-solid fa-file-invoice"></i>
+            </div>
+            <div class="spending-amount" style="color: var(--accent-caramel);">$1,850.00</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Due: Oct 20, 2026</p>
+          </div>
+
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Net-30 Credit Line</span>
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="spending-amount">$10,000.00</div>
+            <p style="font-size: 0.8rem; color: #10B981; margin: 0;">$8,150.00 Available</p>
+          </div>
+
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Fiscal Year Spend</span>
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="spending-amount">$8,450.00</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">28 Total Invoices Paid</p>
+          </div>
+
+          <div class="spending-stat-card">
+            <div class="spending-card-header">
+              <span>Corporate Savings</span>
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <div class="spending-amount" style="color: #10B981;">$1,120.00</div>
+            <p style="font-size: 0.8rem; color: #10B981; margin: 0;">15% Platinum Discount</p>
+          </div>
+        </div>
+
+        <!-- Invoices Table -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-file-invoice-dollar text-accent"></i> Tax Invoices & Statements</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Download official PDF tax statements for corporate accounting</span>
+            </div>
+            <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Annual Consolidated Tax Statement PDF downloaded', 'success');">
+              <i class="fa-solid fa-download"></i> Consolidated Statement
+            </button>
+          </div>
+
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Event / Service</th>
+                  <th>Issue Date</th>
+                  <th>Due Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#INV-9012</strong></td>
+                  <td>Annual Autumn Gala (200 Guests)</td>
+                  <td>Oct 01, 2026</td>
+                  <td>Oct 20, 2026</td>
+                  <td><strong>$1,850.00</strong></td>
+                  <td><span class="order-status-badge status-preparing">Net-30 Pending</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Invoice #INV-9012 downloaded', 'success');"><i class="fa-solid fa-file-pdf"></i> PDF</button></td>
+                </tr>
+                <tr>
+                  <td><strong>#INV-8820</strong></td>
+                  <td>Summer Brand Launch Catering</td>
+                  <td>Aug 15, 2026</td>
+                  <td>Sep 15, 2026</td>
+                  <td><strong>$1,420.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Paid (Wire)</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Invoice #INV-8820 downloaded', 'success');"><i class="fa-solid fa-file-pdf"></i> PDF</button></td>
+                </tr>
+                <tr>
+                  <td><strong>#INV-8650</strong></td>
+                  <td>Financial Quarter Banquet Buffet</td>
+                  <td>Jul 10, 2026</td>
+                  <td>Aug 10, 2026</td>
+                  <td><strong>$980.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Paid (Wire)</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Invoice #INV-8650 downloaded', 'success');"><i class="fa-solid fa-file-pdf"></i> PDF</button></td>
+                </tr>
+                <tr>
+                  <td><strong>#INV-8410</strong></td>
+                  <td>Spring Executive Retreat Pastry Trays</td>
+                  <td>May 18, 2026</td>
+                  <td>Jun 18, 2026</td>
+                  <td><strong>$440.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Paid (Wire)</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Invoice #INV-8410 downloaded', 'success');"><i class="fa-solid fa-file-pdf"></i> PDF</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 7: CORPORATE OFFERS & TIERS ==================== -->
+      <section class="client-tab-content" id="offers">
+        <div class="dashboard-box" style="background: linear-gradient(135deg, var(--primary-dark) 0%, #2A1710 100%); color: #FFFFFF;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="badge badge-gold" style="margin-bottom: 0.5rem;">Corporate Tier</span>
+              <h3 style="color: #FFFFFF; font-size: 1.5rem; margin-bottom: 0.25rem;">Platinum B2B Partner Status <i class="fa-solid fa-trophy text-gold"></i></h3>
+              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; margin: 0;">
+                Guaranteed 15% discount across all bespoke cakes, 24-hour emergency baking slots, and dedicated chef tasting sessions.
+              </p>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: #10B981;">15% OFF</div>
+              <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.7);">Applied to All Invoices</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <h3><i class="fa-solid fa-ticket text-accent"></i> Corporate Event Promo Codes (Click to Copy)</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Apply during online booking or Net-30 checkout</span>
+          </div>
+
+          <div class="offers-grid">
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">Annual Gala Catering Perk</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Free Macaron Tower with orders > $1,500</p>
+                <span class="promo-tag-code">CORP-GALA2026</span>
+              </div>
+              <i class="fa-solid fa-champagne-glasses text-accent" style="font-size: 2rem;"></i>
+            </div>
+
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">Recurring Office Breakfast Plan</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Free artisan coffee carafe with weekly boxes</p>
+                <span class="promo-tag-code">CORP-BREWPERK</span>
+              </div>
+              <i class="fa-solid fa-mug-saucer text-accent" style="font-size: 2rem;"></i>
+            </div>
+
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">Holiday Corporate Gifting</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">25% OFF custom embossed macaron tins</p>
+                <span class="promo-tag-code">CORP-BULK25</span>
+              </div>
+              <i class="fa-solid fa-gift text-accent" style="font-size: 2rem;"></i>
+            </div>
+
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">VIP Chef Tasting Session</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Complimentary 6-course cake tasting box</p>
+                <span class="promo-tag-code">CORP-TASTINGBOX</span>
+              </div>
+              <i class="fa-solid fa-utensils text-accent" style="font-size: 2rem;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dedicated Account Manager -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <h3><i class="fa-solid fa-headset text-accent"></i> Dedicated Corporate Concierge</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Direct priority support for <span id="client-concierge-entity">Grand Elysée Events</span></span>
+          </div>
+          <div class="grid-2" style="align-items: center;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--primary-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div>
+                <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-dark);">Jean-Luc Moreau</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Senior Event Director & Pastry Concierge</div>
+                <div style="font-size: 0.8rem; color: #10B981; font-weight: 600;"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Available Mon - Sat, 06:00 AM – 09:00 PM</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; justify-content: flex-end; flex-wrap: wrap;">
+              <a href="404.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-phone"></i> 1800789456</a>
+              <a href="404.html" class="btn btn-sm btn-primary"><i class="fa-solid fa-envelope"></i> info@stackly.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 8: SETTINGS & BILLING ==================== -->
+      <section class="client-tab-content" id="settings">
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-sliders text-accent"></i> Corporate Account & Billing Settings</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Manage event coordination, authorized bookers, and Net-30 invoicing terms</span>
+            </div>
+          </div>
+
+          <form id="client-settings-form" novalidate onsubmit="event.preventDefault(); window.Bakery.showToast('Corporate settings saved successfully!', 'success');">
+            <!-- Corporate Entity Info -->
+            <h4 style="font-size: 1rem; color: var(--primary-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
+              <i class="fa-solid fa-building text-accent"></i> Corporate Entity Information
+            </h4>
+            <div class="grid-2" style="margin-bottom: 1.5rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Company / Organization Name</label>
+                <input type="text" id="client-settings-fullname" class="form-control" value="Grand Elysée Events" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);" required>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Corporate Tax ID / GSTIN</label>
+                <input type="text" class="form-control" value="33AAAAA0000A1Z5" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);" required>
+              </div>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 1.5rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Accounts Payable Email</label>
+                <input type="email" id="client-settings-email" class="form-control" value="accounts@grandelysee.com" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);" required>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Invoicing & Payment Terms</label>
+                <select class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);">
+                  <option selected>Net-30 Corporate Invoicing (Approved)</option>
+                  <option>Net-15 Direct Wire Transfer</option>
+                  <option>Auto-Charge Corporate Card</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Primary Venue Loading Dock -->
+            <h4 style="font-size: 1rem; color: var(--primary-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
+              <i class="fa-solid fa-truck-ramp-box text-accent"></i> Primary Venue Delivery & Loading Dock Instructions
+            </h4>
+            <div style="margin-bottom: 1.5rem;">
+              <input type="text" class="form-control" value="MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008 (Loading Bay #2)" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);" required>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.Bakery.showToast('Changes discarded', 'info');">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk"></i> Save Corporate Settings</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Master Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

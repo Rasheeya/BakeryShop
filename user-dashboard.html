@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Le Petit Four</title>
+  <meta name="description" content="Manage your bakery orders, track live baking and delivery progress, view sweet loyalty rewards, and save your favorite treats.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/user-dashboard.css">
+</head>
+<body>
+
+  <!-- ==================== DASHBOARD LAYOUT ==================== -->
+  <div class="dashboard-layout">
+    <!-- USER DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <!-- Sidebar Brand Header -->
+      <div class="sidebar-brand-box">
+        <a href="index.html" title="Back to Home">
+          <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" style="height: 42px; object-fit: contain;">
+        </a>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close sidebar menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar-menu-list">
+        <a href="#overview" class="sidebar-nav-item active"><i class="fa-solid fa-chart-pie"></i> <span>Overview</span></a>
+        <a href="#my-orders" class="sidebar-nav-item"><i class="fa-solid fa-receipt"></i> <span>My Orders</span> <span class="badge-count">14</span></a>
+        <a href="#order-tracking" class="sidebar-nav-item"><i class="fa-solid fa-truck-fast"></i> <span>Order Tracking</span> <span class="order-status-badge status-baking" style="padding: 0.1rem 0.45rem; font-size: 0.65rem;">Active</span></a>
+        <a href="#wishlist" class="sidebar-nav-item"><i class="fa-solid fa-heart"></i> <span>Wishlist</span> <span class="badge-count wishlist-count-badge">3</span></a>
+        <a href="#offers" class="sidebar-nav-item"><i class="fa-solid fa-gift"></i> <span>Offers & Rewards</span></a>
+        <a href="#settings" class="sidebar-nav-item"><i class="fa-solid fa-sliders"></i> <span>Settings</span></a>
+      </nav>
+
+      <!-- Sidebar Bottom Logout Section -->
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-logout-btn" onclick="localStorage.removeItem('bakery_user_role'); localStorage.removeItem('bakery_user_email'); localStorage.removeItem('bakery_user_name'); localStorage.removeItem('bakery_first_name');" title="Logout from account">
+          <div class="logout-icon-wrap">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </div>
+          <span>Logout Account</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- DASHBOARD MAIN CONTENT -->
+    <main class="dashboard-main">
+      <!-- TOPBAR NAVIGATION ROW -->
+      <div class="dashboard-topbar">
+        <div class="dashboard-topbar-left">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="index.html" class="dashboard-mobile-logo" title="Back to Home">
+            <img src="assets/logo.webp" alt="Stackly Bakery">
+          </a>
+        </div>
+        
+        <div class="dashboard-topbar-right">
+          <a href="404.html" class="topbar-icon-btn" title="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="topbar-icon-badge"></span>
+          </a>
+          <a href="404.html" class="btn btn-sm btn-outline desktop-only-btn">Client Hub</a>
+          <a href="404.html" class="topbar-user-profile" title="View Profile">
+            <div class="topbar-avatar-circle" id="user-avatar-initial">M</div>
+            <div class="topbar-user-info">
+              <h4 id="user-topbar-email">madeleine.dupont@example.com</h4>
+              <span class="topbar-user-badge" id="user-topbar-role">Customer</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- PAGE TITLE HEADER -->
+      <div class="dashboard-page-header">
+        <h2>Hello, <span id="user-greeting-firstname">Madeleine</span>! <i class="fa-solid fa-bread-slice text-accent"></i></h2>
+        <p>Here is the fresh status of your bakery orders and loyalty treats.</p>
+      </div>
+
+      <!-- ==================== TAB 1: OVERVIEW ==================== -->
+      <section class="dashboard-tab-content active" id="overview">
+        <!-- Stats Overview Grid -->
+        <div class="stats-overview-grid">
+          <div class="dashboard-stat-card">
+            <div class="spending-card-header">
+              <span>Total Orders</span>
+              <div class="stat-card-badge stat-icon-orders"><i class="fa-solid fa-bag-shopping"></i></div>
+            </div>
+            <div class="spending-amount">14</div>
+            <p class="stat-trend-sub stat-trend-positive"><i class="fa-solid fa-arrow-trend-up"></i> +12% this month</p>
+          </div>
+
+          <div class="dashboard-stat-card">
+            <div class="spending-card-header">
+              <span>Favorite Items</span>
+              <div class="stat-card-badge stat-icon-favs"><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="spending-amount wishlist-count-badge">3</div>
+            <p class="stat-trend-sub"><i class="fa-solid fa-circle-check"></i> Saved Bakery Treats</p>
+          </div>
+
+          <div class="dashboard-stat-card">
+            <div class="spending-card-header">
+              <span>Cart Items</span>
+              <div class="stat-card-badge stat-icon-cart"><i class="fa-solid fa-basket-shopping"></i></div>
+            </div>
+            <div class="spending-amount cart-count-badge">0</div>
+            <p class="stat-trend-sub"><i class="fa-solid fa-clock"></i> Ready for checkout</p>
+          </div>
+
+          <div class="dashboard-stat-card">
+            <div class="spending-card-header">
+              <span>Sweet Points</span>
+              <div class="stat-card-badge stat-icon-points"><i class="fa-solid fa-coins"></i></div>
+            </div>
+            <div class="spending-amount">420</div>
+            <p class="stat-trend-sub stat-trend-positive"><i class="fa-solid fa-arrow-trend-up"></i> 80 pts to Platinum</p>
+          </div>
+        </div>
+
+        <!-- Quick Actions Bar -->
+        <div class="quick-actions-bar">
+          <a href="404.html" class="quick-action-card">
+            <div class="quick-action-icon"><i class="fa-solid fa-bread-slice"></i></div>
+            <div class="quick-action-info">
+              <h5>Shop Bakery</h5>
+              <span>Browse 50+ fresh items</span>
+            </div>
+          </a>
+          <div class="quick-action-card" data-tab-target="#my-orders">
+            <div class="quick-action-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <div class="quick-action-info">
+              <h5>Order History</h5>
+              <span>View 14 past receipts</span>
+            </div>
+          </div>
+          <div class="quick-action-card" data-tab-target="#offers">
+            <div class="quick-action-icon"><i class="fa-solid fa-gift"></i></div>
+            <div class="quick-action-info">
+              <h5>Redeem Perks</h5>
+              <span>4 promo codes active</span>
+            </div>
+          </div>
+          <div class="quick-action-card" data-tab-target="#settings">
+            <div class="quick-action-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="quick-action-info">
+              <h5>Delivery Slot</h5>
+              <span>07:00 AM – 08:30 AM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Order Snapshot -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-truck-fast text-accent"></i> Active Order (#LPF-8921)</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">1x Belgian Truffle Cake, 2x Butter Croissants • $41.50</span>
+            </div>
+            <span class="order-status-badge status-baking">In The Oven</span>
+          </div>
+          <div style="padding: 1rem 0 0.5rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.5rem;">
+              <span><strong>Progress:</strong> Baking Stage (Oven Deck #2)</span>
+              <span><strong>Estimated Delivery:</strong> Today 10:30 AM (25 mins remaining)</span>
+            </div>
+            <div class="spending-progress-bar"><div class="spending-progress-fill" style="width: 50%;"></div></div>
+          </div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
+            <button class="btn btn-sm btn-primary" data-tab-target="#order-tracking">
+              <i class="fa-solid fa-location-crosshairs"></i> View Full Live Tracker
+            </button>
+          </div>
+        </div>
+
+        <!-- Loyalty Progress Card -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <h3><i class="fa-solid fa-crown text-accent"></i> Sweet Rewards Tier Status</h3>
+            <span class="badge badge-gold">VIP Gold Member</span>
+          </div>
+          <div class="grid-2" style="align-items: center;">
+            <div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                You have earned <strong>420 Sweet Points</strong>! You are only <strong>80 points away</strong> from unlocking the Platinum Tier with complimentary weekly croissants.
+              </p>
+              <div class="spending-progress-bar" style="margin-bottom: 0.5rem;">
+                <div class="spending-progress-fill" style="width: 84%; background: linear-gradient(90deg, var(--accent-caramel), var(--accent-gold));"></div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-light);">420 / 500 Points to Platinum</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; justify-content: flex-end; flex-wrap: wrap;">
+              <button class="btn btn-sm btn-outline" data-tab-target="#offers">
+                <i class="fa-solid fa-gift"></i> Rewards Catalog
+              </button>
+              <button class="btn btn-sm btn-primary" onclick="window.Bakery.showToast('Referral link copied to clipboard!', 'success');">
+                <i class="fa-solid fa-share-nodes"></i> Refer a Friend (+100 Pts)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommended Products -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <h3><i class="fa-solid fa-sparkles text-accent"></i> Recommended For You</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Based on your pastry preferences</span>
+          </div>
+
+          <div class="grid-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/sourdough-bread.webp" alt="Belgian Truffle Cake">
+                <button class="product-wishlist-btn" data-product-id="prod-2" onclick="window.Bakery.toggleWishlist('prod-2')">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="product-content">
+                <span class="product-category-tag">Cakes</span>
+                <h4 class="product-title">Belgian Truffle Cake</h4>
+                <p class="product-desc">Rich 70% dark chocolate ganache with handmade truffles.</p>
+                <div class="product-footer">
+                  <span class="current-price">$34.00</span>
+                  <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-2')">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/choc-cookies.webp" alt="Chocolate Cookies">
+                <button class="product-wishlist-btn" data-product-id="prod-8" onclick="window.Bakery.toggleWishlist('prod-8')">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="product-content">
+                <span class="product-category-tag">Cookies</span>
+                <h4 class="product-title">Chunky Sea Salt Choc Cookies</h4>
+                <p class="product-desc">Molten dark chocolate chunks and Maldon sea salt flakes.</p>
+                <div class="product-footer">
+                  <span class="current-price">$14.50</span>
+                  <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-8')">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/artisan-baguette.webp" alt="French Croissant">
+                <button class="product-wishlist-btn" data-product-id="prod-3" onclick="window.Bakery.toggleWishlist('prod-3')">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="product-content">
+                <span class="product-category-tag">Pastries</span>
+                <h4 class="product-title">French Butter Croissant</h4>
+                <p class="product-desc">81 delicate flaky layers made with Normandy butter.</p>
+                <div class="product-footer">
+                  <span class="current-price">$3.75</span>
+                  <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-3')">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 2: MY ORDERS ==================== -->
+      <section class="dashboard-tab-content" id="my-orders">
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-receipt text-accent"></i> Order History & Invoices</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">14 Orders Total • $482.50 Spent • 100% On-Time Delivery</span>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Place New Order</a>
+          </div>
+
+          <!-- Order Filter Toolbar -->
+          <div class="order-filter-toolbar">
+            <div class="order-filter-group">
+              <button class="order-filter-btn active" data-filter="all">All (14)</button>
+              <button class="order-filter-btn" data-filter="baking">In The Oven (1)</button>
+              <button class="order-filter-btn" data-filter="delivered">Delivered (12)</button>
+              <button class="order-filter-btn" data-filter="custom">Custom Cakes (1)</button>
+            </div>
+            <div style="position: relative;">
+              <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.85rem;"></i>
+              <input type="text" class="order-search-input" placeholder="Search order ID, item...">
+            </div>
+          </div>
+
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Bakery Items</th>
+                  <th>Order Date</th>
+                  <th>Delivery Slot</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="baking">
+                  <td><strong>#LPF-8921</strong></td>
+                  <td>1x Belgian Truffle Cake, 2x Butter Croissants</td>
+                  <td>Oct 6, 2026</td>
+                  <td>Today 10:30 AM</td>
+                  <td><strong>$41.50</strong></td>
+                  <td><span class="order-status-badge status-baking">Baking</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-primary" data-tab-target="#order-tracking" title="Track Live Order">Track</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Order details downloaded', 'info');">Receipt</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="delivered">
+                  <td><strong>#LPF-8890</strong></td>
+                  <td>2x Artisanal Sourdough, 1x Macarons Box (12pcs)</td>
+                  <td>Oct 1, 2026</td>
+                  <td>Morning 08:00 AM</td>
+                  <td><strong>$39.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Delivered</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.addToCart('prod-1', 2);">Reorder</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Receipt #LPF-8890 downloaded', 'success');">Invoice</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="custom">
+                  <td><strong>#LPF-8742</strong></td>
+                  <td>1x Bespoke Birthday Cake (Custom 8" Tier, Belgian Truffle)</td>
+                  <td>Sep 22, 2026</td>
+                  <td>Special Evening 06:00 PM</td>
+                  <td><strong>$75.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Delivered</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Custom design blueprint opened', 'info');">Blueprint</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Tax Invoice #LPF-8742 saved', 'success');">Invoice</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="delivered">
+                  <td><strong>#LPF-8610</strong></td>
+                  <td>4x Pain au Chocolat, 2x Raspberry Danish Tart</td>
+                  <td>Sep 10, 2026</td>
+                  <td>Morning 07:30 AM</td>
+                  <td><strong>$26.50</strong></td>
+                  <td><span class="order-status-badge status-delivered">Delivered</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.addToCart('prod-3', 4);">Reorder</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Receipt #LPF-8610 downloaded', 'info');">Receipt</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-status="delivered">
+                  <td><strong>#LPF-8490</strong></td>
+                  <td>1x Strawberry Mille-Feuille, 1x Espresso Hazelnut Tart</td>
+                  <td>Aug 28, 2026</td>
+                  <td>Afternoon 02:00 PM</td>
+                  <td><strong>$32.00</strong></td>
+                  <td><span class="order-status-badge status-delivered">Delivered</span></td>
+                  <td>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.addToCart('prod-4', 1);">Reorder</button>
+                      <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Receipt #LPF-8490 downloaded', 'info');">Receipt</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Weekly Reorder Banner -->
+        <div class="dashboard-box" style="background: linear-gradient(135deg, rgba(200, 131, 52, 0.08) 0%, rgba(229, 168, 75, 0.15) 100%); border: 1px dashed var(--accent-caramel);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;"><i class="fa-solid fa-arrows-rotate text-accent"></i> Recurring Breakfast Routine</h4>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Reorder your favorite weekend basket (2x Sourdoughs + 4x Croissants) in one tap.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="window.Bakery.addToCart('prod-1', 2); window.Bakery.addToCart('prod-3', 4); window.Bakery.showToast('Weekend basket added to cart!', 'success');">
+              <i class="fa-solid fa-cart-plus"></i> Reorder Weekend Basket ($28.50)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 3: ORDER TRACKING ==================== -->
+      <section class="dashboard-tab-content" id="order-tracking">
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-truck-fast text-accent"></i> Live Order Tracking (#LPF-8921)</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Placed: Today 08:15 AM • Estimated Delivery: Today 10:30 AM (25 mins remaining)</span>
+            </div>
+            <span class="order-status-badge status-baking">In The Oven</span>
+          </div>
+
+          <!-- 6-Stage Timeline -->
+          <div class="tracking-timeline-box">
+            <div class="tracking-steps">
+              <div class="tracking-step completed">
+                <div class="tracking-step-dot"><i class="fa-solid fa-check"></i></div>
+                <span class="tracking-step-label">Order Placed<br><small style="color: var(--text-light);">08:15 AM</small></span>
+              </div>
+              <div class="tracking-step completed">
+                <div class="tracking-step-dot"><i class="fa-solid fa-check"></i></div>
+                <span class="tracking-step-label">Proofing Dough<br><small style="color: var(--text-light);">08:45 AM</small></span>
+              </div>
+              <div class="tracking-step active">
+                <div class="tracking-step-dot"><i class="fa-solid fa-fire-burner"></i></div>
+                <span class="tracking-step-label">Baking in Oven<br><small style="color: var(--accent-caramel);">Deck #2 (Current)</small></span>
+              </div>
+              <div class="tracking-step">
+                <div class="tracking-step-dot"><i class="fa-solid fa-box-open"></i></div>
+                <span class="tracking-step-label">Artisan Packing<br><small style="color: var(--text-light);">10:00 AM</small></span>
+              </div>
+              <div class="tracking-step">
+                <div class="tracking-step-dot"><i class="fa-solid fa-van-shuttle"></i></div>
+                <span class="tracking-step-label">Chilled Van Transit<br><small style="color: var(--text-light);">10:15 AM</small></span>
+              </div>
+              <div class="tracking-step">
+                <div class="tracking-step-dot"><i class="fa-solid fa-house-chimney"></i></div>
+                <span class="tracking-step-label">Hand Delivered<br><small style="color: var(--text-light);">10:30 AM</small></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Driver & Destination Cards -->
+          <div class="grid-2" style="margin-top: 1.5rem;">
+            <!-- Driver Card -->
+            <div style="padding: 1.25rem; border: 1px solid var(--border-light); border-radius: var(--radius-md); background: var(--bg-cream);">
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--primary-dark);"><i class="fa-solid fa-id-badge text-accent"></i> Assigned Delivery Courier</h4>
+              <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.75rem;">
+                <div style="width: 46px; height: 46px; border-radius: 50%; background: var(--primary-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--primary-dark);">Pierre Laurent</div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">Chilled Van #3 • Plate: TN-27-BK-8921 • Rating: 4.95 <i class="fa-solid fa-star text-gold"></i></div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <a href="404.html" class="btn btn-sm btn-outline" style="flex: 1; text-align: center;"><i class="fa-solid fa-phone"></i> Call Driver</a>
+                <button class="btn btn-sm btn-outline" style="flex: 1;" onclick="window.Bakery.showToast('Connecting to driver chat...', 'info');"><i class="fa-solid fa-comment-dots"></i> Message</button>
+              </div>
+            </div>
+
+            <!-- Destination Card -->
+            <div style="padding: 1.25rem; border: 1px solid var(--border-light); border-radius: var(--radius-md); background: var(--bg-cream);">
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--primary-dark);"><i class="fa-solid fa-location-dot text-accent"></i> Delivery Destination</h4>
+              <p style="font-size: 0.85rem; color: var(--text-dark); line-height: 1.5; margin-bottom: 0.5rem;">
+                <strong>MMR Complex</strong>, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008
+              </p>
+              <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                <strong>Delivery Note:</strong> "Please leave with front reception or ring apartment doorbell."
+              </div>
+              <div style="font-size: 0.78rem; color: #10B981; font-weight: 600;">
+                <i class="fa-solid fa-snowflake"></i> Climate Controlled at 18°C during transit
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Contents Breakdown -->
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-light);">
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--primary-dark);"><i class="fa-solid fa-basket-shopping text-accent"></i> Order Package Breakdown</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding: 0.4rem 0; border-bottom: 1px dashed var(--border-light);">
+                <span>1x Belgian Truffle Cake (70% Dark Chocolate Ganache)</span>
+                <strong>$34.00</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding: 0.4rem 0; border-bottom: 1px dashed var(--border-light);">
+                <span>2x French Butter Croissants (Normandy Butter)</span>
+                <strong>$7.50</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.95rem; padding-top: 0.5rem; color: var(--primary-dark); font-weight: 800;">
+                <span>Total Paid (Online Card • Verified)</span>
+                <span>$41.50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 4: WISHLIST ==================== -->
+      <section class="dashboard-tab-content" id="wishlist">
+        <!-- Live Wishlist Items Card -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-heart text-accent"></i> Saved Bakery Wishlist</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">3 Items Saved • Total Value: $52.25 • All Fresh In Stock</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-2'); window.Bakery.addToCart('prod-8'); window.Bakery.addToCart('prod-3'); window.Bakery.showToast('All 3 wishlist items added to cart!', 'success');">
+              <i class="fa-solid fa-cart-plus"></i> Add All to Basket ($52.25)
+            </button>
+          </div>
+
+          <!-- Price & Oven Batch Alert Strip -->
+          <div class="wishlist-alert-strip">
+            <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.82rem; color: #065F46; display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-tag" style="color: #10B981; font-size: 1rem;"></i>
+              <span><strong>Price Drop:</strong> Belgian Truffle Cake is $34.00 ($8 off).</span>
+            </div>
+            <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.82rem; color: #92400E; display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-fire-burner" style="color: #F59E0B; font-size: 1rem;"></i>
+              <span><strong>Oven Fresh:</strong> Croissants came out at 08:00 AM.</span>
+            </div>
+            <div style="background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.82rem; color: #1E40AF; display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-boxes-stacked" style="color: #3B82F6; font-size: 1rem;"></i>
+              <span><strong>Stock Status:</strong> All 3 wishlist items available for instant pickup.</span>
+            </div>
+          </div>
+
+          <div class="wishlist-grid" id="dashboard-wishlist-grid">
+            <!-- Populated dynamically by window.Bakery.updateWishlistUI() -->
+            <div class="wishlist-card">
+              <img src="assets/sourdough-bread.webp" alt="Belgian Truffle Cake" class="wishlist-img">
+              <div class="wishlist-info">
+                <span class="product-category-tag" style="margin-bottom: 0.25rem;">Cakes</span>
+                <h5>Belgian Truffle Cake</h5>
+                <div class="wishlist-price">$34.00 <span style="font-size: 0.75rem; text-decoration: line-through; color: var(--text-light); font-weight: 500;">$42.00</span></div>
+                <div class="wishlist-actions">
+                  <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-2');"><i class="fa-solid fa-plus"></i> Add</button>
+                  <button class="btn btn-sm btn-outline" onclick="window.Bakery.toggleWishlist('prod-2');"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-card">
+              <img src="assets/choc-cookies.webp" alt="Chunky Sea Salt Choc Cookies" class="wishlist-img">
+              <div class="wishlist-info">
+                <span class="product-category-tag" style="margin-bottom: 0.25rem;">Cookies</span>
+                <h5>Chunky Sea Salt Choc Cookies</h5>
+                <div class="wishlist-price">$14.50 <span style="font-size: 0.75rem; color: #10B981; font-weight: 600;">Fresh Batch</span></div>
+                <div class="wishlist-actions">
+                  <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-8');"><i class="fa-solid fa-plus"></i> Add</button>
+                  <button class="btn btn-sm btn-outline" onclick="window.Bakery.toggleWishlist('prod-8');"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-card">
+              <img src="assets/artisan-baguette.webp" alt="French Butter Croissant" class="wishlist-img">
+              <div class="wishlist-info">
+                <span class="product-category-tag" style="margin-bottom: 0.25rem;">Pastries</span>
+                <h5>French Butter Croissant</h5>
+                <div class="wishlist-price">$3.75 <span style="font-size: 0.75rem; color: var(--accent-caramel); font-weight: 600;">Warm</span></div>
+                <div class="wishlist-actions">
+                  <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-3');"><i class="fa-solid fa-plus"></i> Add</button>
+                  <button class="btn btn-sm btn-outline" onclick="window.Bakery.toggleWishlist('prod-3');"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curated Wishlist Collections / Moodboards -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h4 style="margin-bottom: 0.2rem; font-size: 1.15rem;"><i class="fa-solid fa-folder-open text-accent"></i> My Wishlist Collections</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Organized lists for different occasions and recurring morning routines.</span>
+            </div>
+            <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Created new collection folder!', 'success');">
+              <i class="fa-solid fa-folder-plus"></i> New Collection
+            </button>
+          </div>
+
+          <div class="wishlist-folder-grid">
+            <div class="wishlist-folder-card">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(200, 131, 52, 0.15); color: var(--accent-caramel); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                  <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <span class="order-status-badge status-delivered" style="font-size: 0.7rem;">Active Routine</span>
+              </div>
+              <h5 style="font-size: 0.95rem; margin-bottom: 0.3rem;">Weekend French Brunch</h5>
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">3 Items • Sourdough, Croissants, Jam</span>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                <strong style="color: var(--primary-dark);">$18.25</strong>
+                <button class="btn btn-sm btn-primary" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;" onclick="window.Bakery.addToCart('prod-1'); window.Bakery.addToCart('prod-3'); window.Bakery.showToast('Weekend Brunch collection added to cart!', 'success');">Order List</button>
+              </div>
+            </div>
+
+            <div class="wishlist-folder-card">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(220, 38, 38, 0.12); color: #DC2626; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                  <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <span class="order-status-badge status-baking" style="font-size: 0.7rem;">Upcoming Event</span>
+              </div>
+              <h5 style="font-size: 0.95rem; margin-bottom: 0.3rem;">Birthday Celebration Shortlist</h5>
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">4 Items • Custom Cake, Tarts, Macarons</span>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                <strong style="color: var(--primary-dark);">$86.50</strong>
+                <a href="404.html" class="btn btn-sm btn-outline" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Consult</a>
+              </div>
+            </div>
+
+            <div class="wishlist-folder-card">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(16, 185, 129, 0.12); color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                  <i class="fa-solid fa-gift"></i>
+                </div>
+                <span class="order-status-badge status-preparing" style="font-size: 0.7rem;">Gift Box</span>
+              </div>
+              <h5 style="font-size: 0.95rem; margin-bottom: 0.3rem;">Artisan Festive Hamper</h5>
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">5 Items • Cookies, Biscotti, Truffles</span>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                <strong style="color: var(--primary-dark);">$75.00</strong>
+                <button class="btn btn-sm btn-primary" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;" onclick="window.Bakery.addToCart('prod-8'); window.Bakery.showToast('Gift hamper added to cart!', 'success');">Order List</button>
+              </div>
+            </div>
+
+            <div class="wishlist-folder-card">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(59, 130, 246, 0.12); color: #3B82F6; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                  <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                <span class="order-status-badge status-delivered" style="font-size: 0.7rem;">Tea Treats</span>
+              </div>
+              <h5 style="font-size: 0.95rem; margin-bottom: 0.3rem;">Afternoon Tea Bites</h5>
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">2 Items • Éclairs, Madeleine Cakes</span>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                <strong style="color: var(--primary-dark);">$24.00</strong>
+                <button class="btn btn-sm btn-primary" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;" onclick="window.Bakery.addToCart('prod-5'); window.Bakery.showToast('Tea treats added to cart!', 'success');">Order List</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frequently Paired With Your Saved Treats -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h4 style="margin-bottom: 0.2rem; font-size: 1.15rem;"><i class="fa-solid fa-sparkles text-accent"></i> Frequently Paired with Your Wishlist</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Master baker recommendations crafted to complement your favorite items.</span>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline">Explore Full Menu</a>
+          </div>
+
+          <div class="wishlist-paired-grid">
+            <div class="paired-item-card">
+              <img src="assets/chocolate-eclair.webp" alt="Madagascar Vanilla Eclairs" class="paired-item-img">
+              <div class="paired-item-body">
+                <span class="product-category-tag" style="margin-bottom: 0.25rem;">Pastry</span>
+                <h5 style="font-size: 0.92rem; margin-bottom: 0.25rem;">Madagascar Vanilla Eclair</h5>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.6rem;">Crispy choux filled with Bourbon vanilla bean custard.</p>
+                <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--accent-caramel); font-size: 0.95rem;">$4.50</strong>
+                  <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-5');"><i class="fa-solid fa-plus"></i> Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="paired-item-card">
+              <img src="assets/cheesecake.webp" alt="Artisan Salted Caramel Spread" class="paired-item-img">
+              <div class="paired-item-body">
+                <span class="product-category-tag" style="margin-bottom: 0.25rem;">Pantry</span>
+                <h5 style="font-size: 0.92rem; margin-bottom: 0.25rem;">Fleur de Sel Caramel Jar</h5>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.6rem;">250g glass jar with Guérande sea salt butter caramel.</p>
+                <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--accent-caramel); font-size: 0.95rem;">$8.25</strong>
+                  <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-7');"><i class="fa-solid fa-plus"></i> Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="paired-item-card">
+              <img src="assets/contact-baking.webp" alt="Single-Origin Espresso Roast" class="paired-item-img">
+              <div class="paired-item-body">
+                <span class="product-category-tag" style="margin-bottom: 0.25rem;">Coffee</span>
+                <h5 style="font-size: 0.92rem; margin-bottom: 0.25rem;">Artisan Espresso Roast (350g)</h5>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.6rem;">Notes of roasted hazelnut, cocoa nibs, and honey.</p>
+                <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--accent-caramel); font-size: 0.95rem;">$14.00</strong>
+                  <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-6');"><i class="fa-solid fa-plus"></i> Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="paired-item-card">
+              <img src="assets/french-macarons.webp" alt="Raspberry Rose Macarons" class="paired-item-img">
+              <div class="paired-item-body">
+                <span class="product-category-tag" style="margin-bottom: 0.25rem;">Confection</span>
+                <h5 style="font-size: 0.92rem; margin-bottom: 0.25rem;">Raspberry Macaron Box (6pc)</h5>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.6rem;">Delicate almond shells with organic raspberry ganache.</p>
+                <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--accent-caramel); font-size: 0.95rem;">$16.50</strong>
+                  <button class="btn btn-sm btn-primary" onclick="window.Bakery.addToCart('prod-4');"><i class="fa-solid fa-plus"></i> Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wishlist Tools & Export Center -->
+        <div class="dashboard-box" style="background: linear-gradient(135deg, rgba(200, 131, 52, 0.08) 0%, rgba(229, 168, 75, 0.15) 100%); border: 1px dashed var(--accent-caramel);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;"><i class="fa-solid fa-share-nodes text-accent"></i> Share or Subscribe to Your Wishlist</h4>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Convert your saved items into a recurring weekly breakfast delivery or share the link with friends & family.</p>
+            </div>
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+              <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Wishlist link copied to clipboard!', 'success');">
+                <i class="fa-solid fa-copy"></i> Copy Share Link
+              </button>
+              <button class="btn btn-sm btn-outline" onclick="window.Bakery.showToast('Downloading Wishlist Tasting PDF...', 'info');">
+                <i class="fa-solid fa-file-pdf"></i> Download PDF
+              </button>
+              <button class="btn btn-sm btn-primary" onclick="window.Bakery.showToast('Converted wishlist to weekly delivery! Check subscriptions.', 'success');">
+                <i class="fa-solid fa-arrows-rotate"></i> Auto-Replenish (15% Off)
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 5: OFFERS & REWARDS ==================== -->
+      <section class="dashboard-tab-content" id="offers">
+        <!-- VIP Tier Banner -->
+        <div class="dashboard-box" style="background: linear-gradient(135deg, var(--primary-dark) 0%, #2A1710 100%); color: #FFFFFF;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="badge badge-gold" style="margin-bottom: 0.5rem;">Active Membership</span>
+              <h3 style="color: #FFFFFF; font-size: 1.5rem; margin-bottom: 0.25rem;">VIP Gold Member Tier <i class="fa-solid fa-crown text-gold"></i></h3>
+              <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; margin: 0;">
+                Enjoy 10% bonus sweet points, complimentary weekend delivery, and priority festive baking slots.
+              </p>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--accent-caramel);">420</div>
+              <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.7);">Available Sweet Points</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promo Codes Grid -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <h3><i class="fa-solid fa-ticket text-accent"></i> Exclusive Promo Codes (Click to Copy)</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Valid for online checkout</span>
+          </div>
+
+          <div class="offers-grid">
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">Birthday Celebration Perk</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">20% OFF any custom tiered cake</p>
+                <span class="promo-tag-code">SWEETBIRTHDAY20</span>
+              </div>
+              <i class="fa-solid fa-cake-candles text-accent" style="font-size: 2rem;"></i>
+            </div>
+
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">Autumn Breakfast Combo</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Buy 2 Sourdoughs, get 2 Croissants FREE</p>
+                <span class="promo-tag-code">AUTUMNCOMBO</span>
+              </div>
+              <i class="fa-solid fa-wheat-awn text-accent" style="font-size: 2rem;"></i>
+            </div>
+
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">First VIP Order Perk</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">$10 OFF any bakery order above $40</p>
+                <span class="promo-tag-code">FIRSTVIP10</span>
+              </div>
+              <i class="fa-solid fa-tag text-accent" style="font-size: 2rem;"></i>
+            </div>
+
+            <div class="offer-promo-card">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--primary-dark);">Morning Coffee Carafe</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Free drip brew with pastry platter</p>
+                <span class="promo-tag-code">MORNINGBREW</span>
+              </div>
+              <i class="fa-solid fa-mug-hot text-accent" style="font-size: 2rem;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sweet Points Exchange Store -->
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <h3><i class="fa-solid fa-coins text-accent"></i> Sweet Rewards Store</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Redeem points for complimentary treats</span>
+          </div>
+
+          <div class="grid-3">
+            <div style="padding: 1.25rem; border: 1px solid var(--border-light); border-radius: var(--radius-md); background: var(--bg-cream); text-align: center;">
+              <i class="fa-solid fa-bread-slice text-accent" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+              <h5 style="margin-bottom: 0.2rem;">Free Butter Croissant</h5>
+              <div style="color: var(--accent-caramel); font-weight: 800; margin-bottom: 0.75rem;">100 Points</div>
+              <button class="btn btn-sm btn-primary" style="width: 100%;" onclick="window.Bakery.showToast('Reward claimed! Added to your next order.', 'success');">Claim Perk</button>
+            </div>
+
+            <div style="padding: 1.25rem; border: 1px solid var(--border-light); border-radius: var(--radius-md); background: var(--bg-cream); text-align: center;">
+              <i class="fa-solid fa-wheat-awn text-accent" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+              <h5 style="margin-bottom: 0.2rem;">Artisanal Sourdough Loaf</h5>
+              <div style="color: var(--accent-caramel); font-weight: 800; margin-bottom: 0.75rem;">250 Points</div>
+              <button class="btn btn-sm btn-primary" style="width: 100%;" onclick="window.Bakery.showToast('Reward claimed! Added to your next order.', 'success');">Claim Perk</button>
+            </div>
+
+            <div style="padding: 1.25rem; border: 1px solid var(--border-light); border-radius: var(--radius-md); background: var(--bg-cream); text-align: center;">
+              <i class="fa-solid fa-cake-candles text-accent" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+              <h5 style="margin-bottom: 0.2rem;">6" Celebration Gateau</h5>
+              <div style="color: var(--accent-caramel); font-weight: 800; margin-bottom: 0.75rem;">500 Points</div>
+              <button class="btn btn-sm btn-outline" style="width: 100%; opacity: 0.7;" disabled>80 Pts to Unlock</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 6: SETTINGS ==================== -->
+      <section class="dashboard-tab-content" id="settings">
+        <div class="dashboard-box">
+          <div class="dashboard-box-header">
+            <div>
+              <h3 style="margin-bottom: 0.2rem;"><i class="fa-solid fa-sliders text-accent"></i> Profile & Delivery Settings</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Manage your personal info, morning delivery slots, and dietary preferences</span>
+            </div>
+          </div>
+
+          <form id="user-settings-form" novalidate onsubmit="event.preventDefault(); window.Bakery.showToast('Settings saved successfully!', 'success');">
+            <!-- Profile Info -->
+            <h4 style="font-size: 1rem; color: var(--primary-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
+              <i class="fa-solid fa-user text-accent"></i> Personal Details
+            </h4>
+            <div class="grid-2" style="margin-bottom: 1.5rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Full Name</label>
+                <input type="text" id="user-settings-fullname" class="form-control" value="Madeleine Dupont" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);" required>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Email Address</label>
+                <input type="email" id="user-settings-email" class="form-control" value="madeleine.dupont@example.com" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);" required>
+              </div>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 1.5rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Contact Phone Number</label>
+                <input type="tel" class="form-control" value="+91 98765 43210" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);">
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 0.4rem;">Preferred Morning Delivery Time</label>
+                <select class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);">
+                  <option selected>07:00 AM – 08:30 AM (Fresh Warm Bake)</option>
+                  <option>08:30 AM – 10:00 AM</option>
+                  <option>10:00 AM – 12:00 PM</option>
+                  <option>Afternoon (02:00 PM – 05:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Delivery Address -->
+            <h4 style="font-size: 1rem; color: var(--primary-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
+              <i class="fa-solid fa-location-dot text-accent"></i> Default Delivery Address
+            </h4>
+            <div style="margin-bottom: 1.5rem;">
+              <input type="text" class="form-control" value="MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-cream);" required>
+            </div>
+
+            <!-- Dietary & Allergen Notes -->
+            <h4 style="font-size: 1rem; color: var(--primary-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
+              <i class="fa-solid fa-seedling text-accent"></i> Dietary & Notification Preferences
+            </h4>
+            <div class="grid-2" style="margin-bottom: 1.5rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-dark); cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: var(--accent-caramel);"> Eggless options preference when available
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-dark); cursor: pointer;">
+                  <input type="checkbox" style="accent-color: var(--accent-caramel);"> Nut-free bakery packaging alert
+                </label>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-dark); cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: var(--accent-caramel);"> SMS delivery stage updates
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-dark); cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: var(--accent-caramel);"> Secret seasonal discount alerts
+                </label>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.Bakery.showToast('Changes discarded', 'info');">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk"></i> Save Preferences</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Global Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-accent"></i> Your Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-drawer-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div class="cart-summary-row"><span>Estimated Delivery</span><span id="cart-delivery">$0.00</span></div>
+      <div class="cart-total-row"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='404.html';">
+        <i class="fa-solid fa-lock"></i> Checkout Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Master Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

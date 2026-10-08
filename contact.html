@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Cake Consultation | Le Petit Four</title>
+  <meta name="description" content="Reach our pastry kitchen, book a custom cake consultation, plan event catering, or visit our artisan showroom branches.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="bakery-navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="nav-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="404.html" class="nav-action-btn" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="404.html" class="nav-action-btn cart-toggle-btn" title="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="nav-badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" class="btn btn-sm btn-primary d-none-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="mobile-drawer-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="mobile-drawer-logo">
+      </a>
+      <button class="mobile-drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link active"><span>Contact</span> <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </div>
+  <div class="nav-backdrop"></div>
+
+  <!-- ==================== BANNER ==================== -->
+  <div class="page-banner banner-contact">
+    <div class="container">
+      <span class="section-tag" style="background: rgba(255,255,255,0.15); color: #FFFFFF;"><i class="fa-solid fa-headset text-gold"></i> Get In Touch</span>
+      <h1>Let's Connect & Celebrate</h1>
+      <p>Whether you're planning a grand wedding or want to inquire about daily pastry selections, our bakers are here for you.</p>
+
+      <!-- Live Status & Response Time Bar -->
+      <div class="banner-status-strip">
+        <div class="banner-status-badge">
+          <span class="live-dot"></span>
+          <span><strong>Bakery Open Today:</strong> 7:00 AM – 8:00 PM</span>
+        </div>
+        <div class="banner-status-badge">
+          <i class="fa-solid fa-bolt text-gold"></i>
+          <span><strong>Avg. Response:</strong> &lt; 15 Minutes</span>
+        </div>
+        <div class="banner-status-badge">
+          <i class="fa-solid fa-star text-gold"></i>
+          <span><strong>4.9 Rating</strong> on Google Maps</span>
+        </div>
+      </div>
+
+      <!-- Salem Flagship Stats Strip -->
+      <div class="banner-stats-strip">
+        <div class="banner-stat-cell">
+          <strong>&lt; 15m</strong>
+          <span>Response Time</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>7 Days</strong>
+          <span>Open 7am - 8pm</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>4.9 <i class="fa-solid fa-star text-gold"></i></strong>
+          <span>Google Maps (Salem)</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>100%</strong>
+          <span>Free Consultation</span>
+        </div>
+      </div>
+      
+      <!-- Direct Contact Pills -->
+      <div class="banner-feature-pills">
+        <a href="tel:1800789456" class="banner-pill"><i class="fa-solid fa-phone text-gold"></i> 1800789456</a>
+        <a href="mailto:info@stackly.com" class="banner-pill"><i class="fa-solid fa-envelope text-gold"></i> info@stackly.com</a>
+        <a href="#google-map" class="banner-pill"><i class="fa-solid fa-location-dot text-gold"></i> MMR Complex, Salem</a>
+        <span class="banner-pill"><i class="fa-solid fa-truck-fast text-gold"></i> City-Wide Express Delivery</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="banner-actions">
+        <a href="#contact-form" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i> Send Direct Message</a>
+        <a href="#custom-form" class="btn btn-white btn-sm"><i class="fa-solid fa-cake-candles"></i> Custom Cake Inquiry</a>
+        <a href="#google-map" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.45);"><i class="fa-solid fa-map-location-dot"></i> View Location Map</a>
+        <a href="tel:1800789456" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.45);"><i class="fa-solid fa-phone"></i> Direct Call</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== A. CONTACT INFORMATION CARDS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-info-grid">
+        <!-- Card 1 -->
+        <div class="contact-info-card">
+          <div class="contact-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+          <h4>Bakery Showroom</h4>
+          <p>MMR Complex, Chinna Thirupathi,<br>near Chinna Muniyappan Kovil,<br>Salem, Tamil Nadu 636008</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="contact-info-card">
+          <div class="contact-icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
+          <h4>Direct Bakery Line</h4>
+          <p><a href="tel:1800789456" style="color: inherit; font-weight: 600;">1800789456</a><br>Toll-Free Customer Support</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="contact-info-card">
+          <div class="contact-icon-wrap"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h4>Email & Orders</h4>
+          <p><a href="mailto:info@stackly.com" style="color: inherit; font-weight: 600;">info@stackly.com</a><br>Fast Response Guaranteed</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="contact-info-card">
+          <div class="contact-icon-wrap"><i class="fa-solid fa-clock"></i></div>
+          <h4>Oven & Store Hours</h4>
+          <p>Mon - Fri: 6:30 AM – 8:00 PM<br>Sat - Sun: 7:00 AM – 9:00 PM</p>
+        </div>
+      </div>
+
+      <!-- ==================== B & C. DUAL FORMS GRID ==================== -->
+      <div class="contact-forms-grid" id="custom-form">
+        <!-- B. General Contact Form -->
+        <div class="form-box-card" id="contact-form">
+          <span class="section-tag">General Inquiries</span>
+          <h3>Send Us a Message</h3>
+          <p>Have questions about allergens, ingredient sources, or general bakery queries? Write to us.</p>
+          
+          <form id="bakery-contact-form" novalidate>
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-control" id="contact-name" placeholder="Enter your full name" required>
+              <span class="field-error">Name is required</span>
+            </div>
+
+            <div class="grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="contact-email" placeholder="Enter your email" required>
+                <span class="field-error">Email is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control" id="contact-phone" placeholder="Enter your phone number" required>
+                <span class="field-error">Phone number is required</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Order / Inquiry Type *</label>
+              <select class="form-control" id="contact-type" required>
+                <option value="" disabled selected>Select Inquiry Type</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Custom Cake Consultation">Custom Cake Consultation</option>
+                <option value="Event Catering">Event & Party Catering</option>
+                <option value="Bulk B2B Order">Bulk & Corporate Order</option>
+                <option value="Delivery Question">Delivery & Tracking Question</option>
+              </select>
+              <span class="field-error">Inquiry type is required</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Message *</label>
+              <textarea class="form-control" id="contact-message" placeholder="How can our pastry chefs help you?" required></textarea>
+              <span class="field-error">Message is required</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- C. Dedicated Custom Cake Request Interactive Form -->
+        <div class="form-box-card" style="background: var(--bg-card-warm); border-color: var(--accent-caramel);">
+          <span class="section-tag" style="background: rgba(200, 131, 52, 0.2);">Cake Studio</span>
+          <h3>Request Custom Cake Consultation</h3>
+          <p>Provide your dream cake requirements and our master decorator will prepare a custom proposal.</p>
+
+          <form id="custom-cake-form" novalidate>
+            <div class="grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Cake Occasion *</label>
+                <select class="form-control" id="cake-occasion" required>
+                  <option value="" disabled selected>Select Cake Occasion</option>
+                  <option value="Wedding">Wedding Celebration</option>
+                  <option value="Birthday">Birthday Party</option>
+                  <option value="Anniversary">Anniversary Gateau</option>
+                  <option value="Baby Shower">Baby Shower / Reveal</option>
+                  <option value="Corporate">Corporate Gala</option>
+                </select>
+                <span class="field-error">Cake occasion is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Desired Flavor *</label>
+                <select class="form-control" id="cake-flavor" required>
+                  <option value="" disabled selected>Select Desired Flavor</option>
+                  <option value="Belgian Truffle">Belgian Chocolate Truffle</option>
+                  <option value="Vanilla Bean">Madagascar Vanilla Bean</option>
+                  <option value="Red Velvet">Red Velvet & Cream Cheese</option>
+                  <option value="Pistachio Rose">Pistachio & Raspberry Rose</option>
+                  <option value="Salted Caramel">Salted Caramel Macaron</option>
+                </select>
+                <span class="field-error">Desired flavor is required</span>
+              </div>
+            </div>
+
+            <div class="grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Estimated Guest Count *</label>
+                <input type="number" class="form-control" id="cake-guests" placeholder="e.g. 35 Guests" min="5" max="500" required>
+                <span class="field-error">Guest count is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Event Date *</label>
+                <input type="date" class="form-control" id="cake-date" required>
+                <span class="field-error">Event date is required</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Design & Theme Preferences *</label>
+              <input type="text" class="form-control" id="cake-theme" placeholder="e.g. Floral botanical, Gold foil accents, Pastel pink" required>
+              <span class="field-error">Design preference is required</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Inscription / Custom Message on Cake *</label>
+              <input type="text" class="form-control" id="cake-msg" placeholder="e.g. Happy 30th Birthday Madeleine!" required>
+              <span class="field-error">Custom message is required</span>
+            </div>
+
+            <button type="submit" class="btn btn-secondary" style="width: 100%;">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Submit Custom Cake Brief
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== D. FIND OUR BAKERY BRANCHES ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Showroom Locations</span>
+        <h2>Visit Our Bakeries & Showrooms</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-shop"></i><span></span></div>
+        <p>Step in for warm morning coffee, fresh crusty sourdough loaves, and cake tasting consultations.</p>
+      </div>
+
+      <div class="branches-grid">
+        <!-- Branch 1 (Salem Main Showroom) -->
+        <div class="branch-card">
+          <img src="assets/contact-showroom.webp" alt="Stackly Salem Flagship" class="branch-img">
+          <div class="branch-body">
+            <h4>Salem Flagship Bakery & Showroom</h4>
+            <ul class="branch-info-list">
+              <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</li>
+              <li><i class="fa-solid fa-clock"></i> Daily 6:30 AM – 8:00 PM</li>
+              <li><i class="fa-solid fa-phone"></i> <a href="tel:1800789456" style="color: inherit;">1800789456</a></li>
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@stackly.com" style="color: inherit;">info@stackly.com</a></li>
+            </ul>
+            <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r?entry=ttu&g_ep=EgoyMDI2MDcwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" style="width: 100%; text-decoration: none; justify-content: center;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Branch 2 -->
+        <div class="branch-card">
+          <img src="assets/contact-baking.webp" alt="Westside Patisserie" class="branch-img">
+          <div class="branch-body">
+            <h4>Westside Patisserie & Garden</h4>
+            <ul class="branch-info-list">
+              <li><i class="fa-solid fa-location-dot"></i> 89 Magnolia Gardens Lane, Westside</li>
+              <li><i class="fa-solid fa-clock"></i> Tue - Sun 7:00 AM – 6:00 PM</li>
+              <li><i class="fa-solid fa-phone"></i> <a href="tel:1800789456" style="color: inherit;">1800789456</a></li>
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@stackly.com" style="color: inherit;">info@stackly.com</a></li>
+            </ul>
+            <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r?entry=ttu&g_ep=EgoyMDI2MDcwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" style="width: 100%; text-decoration: none; justify-content: center;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Branch 3 -->
+        <div class="branch-card">
+          <img src="assets/bakery-interior.webp" alt="Waterfront Studio" class="branch-img">
+          <div class="branch-body">
+            <h4>Waterfront Cake Studio</h4>
+            <ul class="branch-info-list">
+              <li><i class="fa-solid fa-location-dot"></i> 12 Harbor Promenade, Pier 4</li>
+              <li><i class="fa-solid fa-clock"></i> Consultations by Appointment</li>
+              <li><i class="fa-solid fa-phone"></i> <a href="tel:1800789456" style="color: inherit;">1800789456</a></li>
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@stackly.com" style="color: inherit;">info@stackly.com</a></li>
+            </ul>
+            <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r?entry=ttu&g_ep=EgoyMDI2MDcwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" style="width: 100%; text-decoration: none; justify-content: center;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== D. INTERACTIVE GOOGLE MAP LOCATION ==================== -->
+  <section class="section" id="google-map">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Map</span>
+        <h2>Find Us on Google Maps</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-map-location-dot"></i><span></span></div>
+        <p>Locate Stackly Bakery easily at MMR Complex, Chinna Thirupathi, Salem. Step in for warm loaves and cakes.</p>
+      </div>
+
+      <div style="background: #FFFFFF; border-radius: var(--radius-lg); padding: 1.25rem; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); overflow: hidden;">
+        <div style="position: relative; width: 100%; height: 420px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
+          <iframe 
+            title="Stackly Bakery Location Map"
+            src="https://maps.google.com/maps?q=Stackly,%20MMR%20Complex,%20Chinna%20Thirupathi,%20Salem,%20Tamil%20Nadu%20636008&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div style="margin-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 0.5rem 0.5rem 0;">
+          <div>
+            <h4 style="color: var(--primary-dark); font-size: 1.15rem; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-shop text-accent"></i> Stackly Bakery & Patisserie
+            </h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.25rem;">
+              <i class="fa-solid fa-location-dot text-gold" style="margin-right: 0.35rem;"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0;">
+              <i class="fa-solid fa-phone text-gold" style="margin-right: 0.35rem;"></i> <a href="tel:1800789456" style="color: inherit; font-weight: 600;">1800789456</a> &nbsp;|&nbsp; 
+              <i class="fa-solid fa-envelope text-gold" style="margin-right: 0.35rem;"></i> <a href="mailto:info@stackly.com" style="color: inherit; font-weight: 600;">info@stackly.com</a>
+            </p>
+          </div>
+          <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r?entry=ttu&g_ep=EgoyMDI2MDcwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration: none;">
+            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== E. FAQ ACCORDION ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2>Frequently Asked Questions</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-circle-question"></i><span></span></div>
+        <p>Everything you need to know about lead times, custom decorations, delivery coverage, and cancellations.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item active">
+          <div class="faq-header">
+            <h5>How far in advance should I order custom celebration cakes?</h5>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <p>For standard birthday cakes, 48 hours notice is ideal. For multi-tier wedding cakes and intricate sculpted fondant designs, we recommend booking 2 to 4 weeks in advance to reserve your date.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h5>How does your temperature-controlled delivery service work?</h5>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <p>Our dedicated delivery fleet features specialized cushioned cargo beds with climate stabilization between 16°C and 18°C. This ensures silk buttercream and delicate sugar florals arrive in pristine, unblemished condition.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h5>Do you offer gluten-free, eggless, or vegan options?</h5>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <p>Yes! We have dedicated eggless chocolate truffle cakes, gluten-friendly almond macarons, and oat milk brioches. Please specify your dietary restrictions when placing your order.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h5>What is your cancellation and rescheduling policy?</h5>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <p>Standard menu orders may be cancelled up to 24 hours prior for a full refund. Custom tiered cakes can be rescheduled or refunded up to 5 days prior to event dispatch.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h5>Can I arrange corporate catering with invoice billing?</h5>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <p>Absolutely. Corporate clients can access our dedicated Client Dashboard for Net-30 invoicing, recurring weekly breakfast orders, and branded pastry assortments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== F. FINAL CALL TO ACTION ==================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="custom-cake-cta-banner">
+        <h2>Make Every Celebration Sweeter</h2>
+        <p>Whether it's morning croissants for breakfast or a magnificent multi-tier wedding centerpiece, let our passion delight your guests.</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="404.html" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-cart-shopping"></i> Order Bakery Online
+          </a>
+          <a href="404.html" class="btn btn-white btn-lg">
+            <i class="fa-solid fa-cake-candles"></i> Customize Your Cake
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL CART & QUICK VIEW MODALS ==================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-accent"></i> Your Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-drawer-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div class="cart-summary-row"><span>Estimated Delivery</span><span id="cart-delivery">$0.00</span></div>
+      <div class="cart-total-row"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='404.html';">
+        <i class="fa-solid fa-lock"></i> Checkout Now
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="window.Bakery.closeQuickView()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-grid">
+        <div class="quickview-media"><img src="" alt="" class="quickview-img"></div>
+        <div class="quickview-details">
+          <div class="quickview-badge-wrap"><span class="badge badge-gold quickview-cat-val">Category</span></div>
+          <h3 class="quickview-title">Product Title</h3>
+          <div class="quickview-price-rating">
+            <span class="quickview-price">$0.00</span>
+            <div class="product-rating" style="margin: 0;">
+              <span class="stars" style="color: #F59E0B;"><i class="fa-solid fa-star"></i></span>
+              <strong class="quickview-rating-val" style="margin-left: 4px;">4.9</strong>
+              <span class="rating-count quickview-reviews-val">(0 reviews)</span>
+            </div>
+          </div>
+          <p class="quickview-desc">Description placeholder</p>
+          <div class="quickview-meta-list">
+            <div><strong>Availability:</strong> Fresh In Stock (Baked Daily)</div>
+            <div><strong>Storage:</strong> Store at 18-20°C in cool dry place</div>
+          </div>
+          <div class="quickview-actions">
+            <div class="qty-input-group">
+              <button onclick="let q=document.getElementById('quickview-qty'); if(q.value>1)q.value--;">-</button>
+              <input type="number" id="quickview-qty" value="1" min="1" max="50">
+              <button onclick="let q=document.getElementById('quickview-qty'); q.value++;">+</button>
+            </div>
+            <button class="btn btn-primary modal-add-cart-btn" style="flex-grow: 1;">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bakery-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 0.5rem;">
+            <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="footer-brand-logo">
+          </a>
+          <p>Handcrafted European sourdoughs, viennoiseries, custom event cakes, and fine chocolate bonbons baked fresh every morning.</p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Bakery</h4>
+          <div class="footer-links">
+            <a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a>
+            <a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a>
+            <a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a>
+            <a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+        <!-- Shop Links -->
+        <div class="footer-col">
+          <h4>Shop Fresh</h4>
+          <div class="footer-links">
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Celebration Cakes</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Artisan Sourdough</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> French Pastries</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Gourmet Cookies</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Macarons & Desserts</a>
+          </div>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="footer-col footer-contact">
+          <h4>Visit & Contact Us</h4>
+          <div style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.8);">
+            <div style="display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-location-dot text-gold" style="margin-top: 4px; font-size: 0.95rem;"></i>
+              <span style="line-height: 1.5;">MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">1800789456</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-envelope text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">info@stackly.com</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-clock text-gold"></i>
+              <span>Mon - Sun: 7:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Map -->
+        <div class="footer-col footer-map-col">
+          <h4>Location Map</h4>
+          <div class="footer-map-wrapper">
+            <iframe 
+              title="Stackly Bakery Salem Location"
+              src="https://maps.google.com/maps?q=Stackly,%20MMR%20Complex,%20Chinna%20Thirupathi,%20Salem,%20Tamil%20Nadu%20636008&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="404.html" class="footer-map-btn">
+              <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Le Petit Four Artisan Bakery. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Food Hygiene Certificate</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

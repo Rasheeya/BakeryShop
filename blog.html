@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Journal & Recipes | Le Petit Four</title>
+  <meta name="description" content="Pastry chef secrets, sourdough troubleshooting, seasonal dessert recipes, and behind-the-scenes stories from our oven flour dusting.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="bakery-navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="nav-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="404.html" class="nav-action-btn" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="404.html" class="nav-action-btn cart-toggle-btn" title="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="nav-badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" class="btn btn-sm btn-primary d-none-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="mobile-drawer-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="mobile-drawer-logo">
+      </a>
+      <button class="mobile-drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link active"><span>Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </div>
+  <div class="nav-backdrop"></div>
+
+  <!-- ==================== BANNER ==================== -->
+  <div class="page-banner banner-blog">
+    <div class="container">
+      <span class="section-tag" style="background: rgba(255,255,255,0.15); color: #FFFFFF;"><i class="fa-solid fa-feather-pointed text-gold"></i> Flour & Sugar Chronicles</span>
+      <h1>Bakery Journal & Master Recipes</h1>
+      <p>Baking guides, pastry chef wisdom, cake styling trends, and delicious behind-the-scenes stories.</p>
+
+      <!-- Interactive Search Box -->
+      <div class="banner-search-container">
+        <div class="banner-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search 50+ recipes, sourdough guides, pastry tips..." id="banner-blog-search" onkeyup="if(event.key==='Enter') window.location.href='#all-articles';">
+          <button class="btn btn-primary btn-sm" onclick="window.location.href='#all-articles';"><i class="fa-solid fa-arrow-right"></i> Search</button>
+        </div>
+        <div class="banner-trending-tags">
+          <span class="trending-label"><i class="fa-solid fa-fire text-gold"></i> Popular:</span>
+          <a href="404.html" class="trending-tag">#CroissantLamination</a>
+          <a href="404.html" class="trending-tag">#SourdoughStarter</a>
+          <a href="404.html" class="trending-tag">#MacaronSecrets</a>
+          <a href="404.html" class="trending-tag">#DarkChocolateGanache</a>
+        </div>
+      </div>
+
+      <!-- Editorial Stats Strip -->
+      <div class="banner-stats-strip">
+        <div class="banner-stat-cell">
+          <strong>50+</strong>
+          <span>Tested Recipes</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>12</strong>
+          <span>Masterclasses</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>100%</strong>
+          <span>Chef-Verified</span>
+        </div>
+        <div class="banner-stat-cell">
+          <strong>15k+</strong>
+          <span>Home Bakers</span>
+        </div>
+      </div>
+      
+      <!-- Feature Highlights -->
+      <div class="banner-feature-pills">
+        <span class="banner-pill"><i class="fa-solid fa-book-bookmark text-gold"></i> 50+ Master Guides</span>
+        <span class="banner-pill"><i class="fa-solid fa-hat-chef text-gold"></i> Chef Secrets</span>
+        <span class="banner-pill"><i class="fa-solid fa-cookie-bite text-gold"></i> Sourdough Science</span>
+        <span class="banner-pill"><i class="fa-solid fa-sparkles text-gold"></i> Free PDF Downloads</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="banner-actions">
+        <a href="404.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-fire"></i> Featured Masterclass</a>
+        <a href="404.html" class="btn btn-white btn-sm"><i class="fa-solid fa-newspaper"></i> Latest Articles</a>
+        <a href="404.html" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.45);"><i class="fa-solid fa-graduation-cap"></i> Baking Classes</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== A. FEATURED RECIPE HERO ==================== -->
+  <section class="section" id="featured-recipe">
+    <div class="container">
+      <div class="featured-recipe-card">
+        <div class="featured-recipe-img">
+          <img src="assets/artisan-baguette.webp" alt="Master Croissant Lamination">
+        </div>
+        <div class="featured-recipe-content">
+          <div class="recipe-meta-row">
+            <span><i class="fa-solid fa-hat-chef"></i> Masterclass</span>
+            <span><i class="fa-solid fa-clock"></i> 3h 45m Prep</span>
+            <span><i class="fa-solid fa-gauge-high"></i> Intermediate</span>
+          </div>
+          <h2 class="featured-recipe-title">The Art of 81-Layer French Croissant Lamination</h2>
+          <p class="featured-recipe-desc">
+            Chef Jean-Pierre reveals the exact butter-temperature formula, rolling technique, and humidity controls necessary to achieve the elusive honeycombed interior and shattering crisp crust at home.
+          </p>
+          <div>
+            <button class="btn btn-primary" onclick="window.Bakery.showToast('Recipe guide PDF downloaded!', 'success')">
+              <i class="fa-solid fa-book-open"></i> Read Full Recipe & Method
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== B. LATEST BAKERY STORIES ==================== -->
+      <div class="section-header" id="all-articles">
+        <span class="section-tag">Freshly Written</span>
+        <h2>Latest Bakery Stories & Guides</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-pen-nib"></i><span></span></div>
+        <p>In-depth culinary articles curated by our team of bakers and cake decorators.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Story 1 -->
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/croissant-hero.webp" alt="Sourdough Starter Care">
+            <span class="blog-category-badge">Baking Tips</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date-author">
+              <span><i class="fa-regular fa-calendar"></i> Oct 2, 2026</span>
+              <span>•</span>
+              <span>By Chef Antoine</span>
+            </div>
+            <h4 class="blog-title">Reviving a Sluggish Sourdough Starter in Winter</h4>
+            <p class="blog-excerpt">Temperature management, flour hydration ratio tweaks, and feeding schedules to keep your wild starter vigorous during cold months.</p>
+            <div class="blog-footer">
+              <a href="404.html" class="blog-read-more">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+              <span style="font-size: 0.8rem; color: var(--text-light);"><i class="fa-regular fa-clock"></i> 5 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/custom-cake-hero.webp" alt="Wedding Cake Trends">
+            <span class="blog-category-badge">Cake Ideas</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date-author">
+              <span><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span>
+              <span>•</span>
+              <span>By Chef Claire</span>
+            </div>
+            <h4 class="blog-title">2026 Wedding Cake Trends: Architectural Minimalism</h4>
+            <p class="blog-excerpt">From deckled textured wafer tiers to monochromatic pressed floral accents, discover the top aesthetic directions for modern bridal centerpieces.</p>
+            <div class="blog-footer">
+              <a href="404.html" class="blog-read-more">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+              <span style="font-size: 0.8rem; color: var(--text-light);"><i class="fa-regular fa-clock"></i> 7 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/french-macarons.webp" alt="Macaron Pairing">
+            <span class="blog-category-badge">Dessert Trends</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date-author">
+              <span><i class="fa-regular fa-calendar"></i> Sep 20, 2026</span>
+              <span>•</span>
+              <span>By Master Sommelier</span>
+            </div>
+            <h4 class="blog-title">The Ultimate Parisian Macaron & Champagne Pairing</h4>
+            <p class="blog-excerpt">How the crisp acidity of vintage Brut balances the richness of salted caramel ganache and delicate raspberry rose ganache shells.</p>
+            <div class="blog-footer">
+              <a href="404.html" class="blog-read-more">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+              <span style="font-size: 0.8rem; color: var(--text-light);"><i class="fa-regular fa-clock"></i> 4 min read</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== C. INTERACTIVE BAKING TIPS ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Chef's Pro Tips</span>
+        <h2>Essential Home Baker's Knowledge</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-lightbulb"></i><span></span></div>
+        <p>Quick professional tricks to preserve freshness, store loaves, and serve bakery treats like a pro.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="tip-card">
+          <div class="tip-header">
+            <div class="tip-icon"><i class="fa-solid fa-bread-slice"></i></div>
+            <h4>How to Store Sourdough</h4>
+          </div>
+          <p>Never refrigerate fresh bread! Keep cut-side down on a wooden cutting board or in a linen bread bag. To refresh day-old crust, mist lightly with water and bake at 200°C for 6 minutes.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-header">
+            <div class="tip-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+            <h4>Keeping Cakes Fresh</h4>
+          </div>
+          <p>For buttercream cakes, refrigerate until 1 hour before serving. Bring to room temperature so the silky cocoa butter and dairy fats melt delicately on the palate.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-header">
+            <div class="tip-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h4>Choosing Cake Tiers</h4>
+          </div>
+          <p>Plan on 100g per guest for dessert-style cakes or 60g for coffee servings. A 2-tier 6"+8" cake effortlessly satisfies 30-35 happy party guests.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-header">
+            <div class="tip-icon"><i class="fa-solid fa-cookie"></i></div>
+            <h4>Resting Cookie Dough</h4>
+          </div>
+          <p>Always chill your cookie dough for at least 24 hours before baking. This hydrates the flour starches and intensifies rich caramelized brown sugar notes.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-header">
+            <div class="tip-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h4>Hydration Matters</h4>
+          </div>
+          <p>A higher hydration dough (75-80%) yields an open, glossy crumb structure, while lower hydration doughs provide sturdy sandwich slicing.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-header">
+            <div class="tip-icon"><i class="fa-solid fa-wine-glass"></i></div>
+            <h4>Dessert & Wine Pairing</h4>
+          </div>
+          <p>Pair 70% dark chocolate gateaux with bold Port or Cabernet, while lemon tarts and berry meringues shine beside crisp sparkling Prosecco.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== D. SEASONAL SPECIALS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Holiday Calendar</span>
+        <h2>Seasonal Bakery Specials</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-calendar-star"></i><span></span></div>
+        <p>Specialty culinary creations handcrafted only during specific festive seasons of the year.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/blog-laminated.webp" alt="Christmas Stollen">
+            <span class="blog-category-badge" style="background: #DC2626;">Winter Special</span>
+          </div>
+          <div class="blog-body">
+            <h4 class="blog-title">Christmas Dresden Stollen & Bûche de Noël</h4>
+            <p class="blog-excerpt">Aged rum-soaked fruits, marzipan core, and dusting of powdered sugar crafted every December.</p>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/wedding-cake.webp" alt="Valentine Sweets">
+            <span class="blog-category-badge" style="background: #E11D48;">Valentine Edition</span>
+          </div>
+          <div class="blog-body">
+            <h4 class="blog-title">Valentine's Heart Truffles & Rose Macarons</h4>
+            <p class="blog-excerpt">Raspberry lychee gateaux and hand-dipped ruby chocolate strawberries for romantic dates.</p>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="assets/dessert-table.webp" alt="Easter Bakery">
+            <span class="blog-category-badge" style="background: #059669;">Spring Special</span>
+          </div>
+          <div class="blog-body">
+            <h4 class="blog-title">Easter Spiced Hot Cross Buns & Egg Tarts</h4>
+            <p class="blog-excerpt">Glazed citrus zest buns with Ceylon cinnamon crosses, baked fresh on Good Friday weekend.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== E. BEHIND THE BAKERY VISUAL STORIES ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Backstage Glimpse</span>
+        <h2>Behind the Bakery Doors</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-camera"></i><span></span></div>
+        <p>A day in the life of our busy flour-dusted kitchen from early 4:00 AM dawn to evening bake-offs.</p>
+      </div>
+
+      <div class="behind-grid">
+        <div class="behind-card">
+          <img src="assets/bakery-kitchen.webp" alt="Dough Kneading">
+          <div class="behind-overlay">
+            <h4 class="behind-title">36-Hour Sourdough Shaping</h4>
+            <p class="behind-desc">Hand-tensioning bannetons before overnight cold retardation in our fermentation cellar.</p>
+          </div>
+        </div>
+
+        <div class="behind-card">
+          <img src="assets/sourdough-bread.webp" alt="Cake Decoration">
+          <div class="behind-overlay">
+            <h4 class="behind-title">Hand-Poured Mirror Glaze</h4>
+            <p class="behind-desc">Applying 32°C dark chocolate mirror glaze over frozen Gianduja mousse dome cakes.</p>
+          </div>
+        </div>
+
+        <div class="behind-card">
+          <img src="assets/croissant-hero.webp" alt="Morning Ovens">
+          <div class="behind-overlay">
+            <h4 class="behind-title">Steam Deck Oven Unloading</h4>
+            <p class="behind-desc">Freshly blistered sourdough loaves emerging with deep crackling blisters and singing crusts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== F. DEDICATED BLOG NEWSLETTER ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-newsletter-banner">
+        <span class="section-tag" style="background: rgba(229, 168, 75, 0.2); color: var(--accent-gold); border-color: rgba(229, 168, 75, 0.35); margin-bottom: 1rem; display: inline-block;">Patisserie Insider</span>
+        <h3>Get Secret Recipes & Weekend Menus</h3>
+        <p>Join over 12,000 passionate home bakers who receive our monthly pastry masterclasses and seasonal discount codes.</p>
+        <form class="blog-newsletter-form newsletter-form" novalidate>
+          <div class="blog-newsletter-input-wrap">
+            <input type="email" class="newsletter-email-input" placeholder="Enter your email address..." required autocomplete="off">
+            <button type="submit" class="btn-subscribe">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Subscribe to Journal</span>
+            </button>
+          </div>
+          <span class="newsletter-error-msg">Email is required</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL CART & QUICK VIEW MODALS ==================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-accent"></i> Your Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-drawer-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div class="cart-summary-row"><span>Estimated Delivery</span><span id="cart-delivery">$0.00</span></div>
+      <div class="cart-total-row"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='404.html';">
+        <i class="fa-solid fa-lock"></i> Checkout Now
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="window.Bakery.closeQuickView()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-grid">
+        <div class="quickview-media"><img src="" alt="" class="quickview-img"></div>
+        <div class="quickview-details">
+          <div class="quickview-badge-wrap"><span class="badge badge-gold quickview-cat-val">Category</span></div>
+          <h3 class="quickview-title">Product Title</h3>
+          <div class="quickview-price-rating">
+            <span class="quickview-price">$0.00</span>
+            <div class="product-rating" style="margin: 0;">
+              <span class="stars" style="color: #F59E0B;"><i class="fa-solid fa-star"></i></span>
+              <strong class="quickview-rating-val" style="margin-left: 4px;">4.9</strong>
+              <span class="rating-count quickview-reviews-val">(0 reviews)</span>
+            </div>
+          </div>
+          <p class="quickview-desc">Description placeholder</p>
+          <div class="quickview-meta-list">
+            <div><strong>Availability:</strong> Fresh In Stock (Baked Daily)</div>
+            <div><strong>Storage:</strong> Store at 18-20°C in cool dry place</div>
+          </div>
+          <div class="quickview-actions">
+            <div class="qty-input-group">
+              <button onclick="let q=document.getElementById('quickview-qty'); if(q.value>1)q.value--;">-</button>
+              <input type="number" id="quickview-qty" value="1" min="1" max="50">
+              <button onclick="let q=document.getElementById('quickview-qty'); q.value++;">+</button>
+            </div>
+            <button class="btn btn-primary modal-add-cart-btn" style="flex-grow: 1;">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bakery-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 0.5rem;">
+            <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="footer-brand-logo">
+          </a>
+          <p>Handcrafted European sourdoughs, viennoiseries, custom event cakes, and fine chocolate bonbons baked fresh every morning.</p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Bakery</h4>
+          <div class="footer-links">
+            <a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a>
+            <a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a>
+            <a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a>
+            <a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+        <!-- Shop Links -->
+        <div class="footer-col">
+          <h4>Shop Fresh</h4>
+          <div class="footer-links">
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Celebration Cakes</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Artisan Sourdough</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> French Pastries</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Gourmet Cookies</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Macarons & Desserts</a>
+          </div>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="footer-col footer-contact">
+          <h4>Visit & Contact Us</h4>
+          <div style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.8);">
+            <div style="display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-location-dot text-gold" style="margin-top: 4px; font-size: 0.95rem;"></i>
+              <span style="line-height: 1.5;">MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">1800789456</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-envelope text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">info@stackly.com</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-clock text-gold"></i>
+              <span>Mon - Sun: 7:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Map -->
+        <div class="footer-col footer-map-col">
+          <h4>Location Map</h4>
+          <div class="footer-map-wrapper">
+            <iframe 
+              title="Stackly Bakery Salem Location"
+              src="https://maps.google.com/maps?q=Stackly,%20MMR%20Complex,%20Chinna%20Thirupathi,%20Salem,%20Tamil%20Nadu%20636008&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="404.html" class="footer-map-btn">
+              <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Le Petit Four Artisan Bakery. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Food Hygiene Certificate</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

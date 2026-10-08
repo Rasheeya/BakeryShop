@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Petit Four | Artisan Bakery & Patisserie</title>
+  <meta name="description" content="Premium artisan bakery crafting fresh breads, bespoke celebration cakes, French pastries, macarons, and gourmet treats daily.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="bakery-navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="nav-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="404.html" class="nav-action-btn" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="404.html" class="nav-action-btn cart-toggle-btn" title="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="nav-badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" class="btn btn-sm btn-primary d-none-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="mobile-drawer-brand">
+        <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="mobile-drawer-logo">
+      </a>
+      <button class="mobile-drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </div>
+  <div class="nav-backdrop"></div>
+
+  <!-- ==================== A. HERO SECTION ==================== -->
+  <section class="hero-section">
+    <div class="hero-glow-circle"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <i class="fa-solid fa-certificate"></i>
+            <span>Award-Winning European Patisserie</span>
+          </div>
+          <h1 class="hero-title">
+            Freshly Baked. <br>
+            <span class="highlight">Beautifully Crafted.</span>
+          </h1>
+          <p class="hero-desc">
+            Experience hand-laminated French pastries, slow-fermented sourdoughs, and bespoke celebration cakes baked fresh from scratch every dawn using heritage ingredients.
+          </p>
+
+          <!-- Hero Highlights -->
+          <div class="banner-feature-pills" style="justify-content: flex-start; margin: 0 0 1.5rem 0;">
+            <span class="banner-pill" style="background: rgba(78, 44, 29, 0.08); color: var(--primary-dark); border-color: rgba(78, 44, 29, 0.15);"><i class="fa-solid fa-wheat-awn text-accent"></i> 100% Organic Flours</span>
+            <span class="banner-pill" style="background: rgba(78, 44, 29, 0.08); color: var(--primary-dark); border-color: rgba(78, 44, 29, 0.15);"><i class="fa-solid fa-truck-fast text-accent"></i> Salem Express Delivery</span>
+            <span class="banner-pill" style="background: rgba(78, 44, 29, 0.08); color: var(--primary-dark); border-color: rgba(78, 44, 29, 0.15);"><i class="fa-solid fa-cake-candles text-accent"></i> Bespoke Custom Cakes</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="404.html" class="btn btn-primary btn-lg">
+              <span>Shop Bakery</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="404.html" class="btn btn-outline btn-lg">
+              <span>Custom Cakes</span>
+              <i class="fa-solid fa-cake-candles"></i>
+            </a>
+          </div>
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">100%</span>
+              <span class="hero-stat-label">Organic Flour</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">5:00 AM</span>
+              <span class="hero-stat-label">Daily Fresh Bake</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">4.9 <i class="fa-solid fa-star text-gold"></i></span>
+              <span class="hero-stat-label">Over 10k Reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrapper">
+          <div class="hero-main-img-container">
+            <img src="assets/croissant-hero.webp" alt="Artisan Breads & Croissants">
+          </div>
+          <!-- Floating Cards -->
+          <div class="floating-card floating-card-1">
+            <div class="floating-card-icon">
+              <i class="fa-solid fa-fire-burner"></i>
+            </div>
+            <div class="floating-card-text">
+              <h5>Fresh Sourdough</h5>
+              <p>Baked 20 mins ago</p>
+            </div>
+          </div>
+          <div class="floating-card floating-card-2">
+            <div class="floating-card-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="floating-card-text">
+              <h5>Best Patisserie 2026</h5>
+              <p>Gold Culinary Medal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== B. FEATURED BAKERY PRODUCTS ==================== -->
+  <section class="section" id="featured-products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Chef's Signature Selection</span>
+        <h2>Our Handcrafted Favorites</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-cookie-bite"></i><span></span></div>
+        <p>From crisp morning viennoiseries to decadent midnight gateaux, explore our most beloved recipes.</p>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="product-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Specialties</button>
+        <button class="filter-btn" data-filter="breads">Breads</button>
+        <button class="filter-btn" data-filter="cakes">Cakes</button>
+        <button class="filter-btn" data-filter="pastries">Pastries</button>
+        <button class="filter-btn" data-filter="cupcakes">Cupcakes</button>
+        <button class="filter-btn" data-filter="donuts">Donuts</button>
+        <button class="filter-btn" data-filter="cookies">Cookies</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="grid-4" id="home-product-grid">
+        <!-- 1. Bread -->
+        <div class="product-card product-grid-item" data-category="breads">
+          <div class="product-image-wrap">
+            <img src="assets/croissant-hero.webp" alt="Artisanal Sourdough Loaf">
+            <div class="product-badges">
+              <span class="badge badge-fresh">Freshly Baked</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-1" onclick="window.Bakery.toggleWishlist('prod-1')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-1')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Artisan Breads</span>
+            <h4 class="product-title">Artisanal Sourdough Loaf</h4>
+            <p class="product-desc">Slow-fermented for 36 hours using heritage wild yeast starter. Crispy crust & airy interior.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(128)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$6.50</span>
+                <span class="original-price">$8.00</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-1')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Cake -->
+        <div class="product-card product-grid-item" data-category="cakes">
+          <div class="product-image-wrap">
+            <img src="assets/sourdough-bread.webp" alt="Belgian Truffle Cake">
+            <div class="product-badges">
+              <span class="badge badge-bestseller">Bestseller</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-2" onclick="window.Bakery.toggleWishlist('prod-2')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-2')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Cakes</span>
+            <h4 class="product-title">Belgian Truffle Cake</h4>
+            <p class="product-desc">Layers of moist chocolate sponge in 70% Belgian chocolate ganache with handmade truffles.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(246)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$34.00</span>
+                <span class="original-price">$42.00</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-2')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Pastries -->
+        <div class="product-card product-grid-item" data-category="pastries">
+          <div class="product-image-wrap">
+            <img src="assets/artisan-baguette.webp" alt="French Butter Croissant">
+            <div class="product-badges">
+              <span class="badge badge-fresh">New</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-3" onclick="window.Bakery.toggleWishlist('prod-3')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-3')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Pastries</span>
+            <h4 class="product-title">French Butter Croissant</h4>
+            <p class="product-desc">Laminated with pure Normandy butter for 81 delicate, flaky layers. Tender inside.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="rating-count">(95)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$3.75</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-3')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Cupcakes -->
+        <div class="product-card product-grid-item" data-category="cupcakes">
+          <div class="product-image-wrap">
+            <img src="assets/chocolate-eclair.webp" alt="Velvet Vanilla Cupcakes">
+            <div class="product-badges">
+              <span class="badge badge-bestseller">Popular</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-4" onclick="window.Bakery.toggleWishlist('prod-4')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-4')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Cupcakes</span>
+            <h4 class="product-title">Velvet Vanilla Cupcakes</h4>
+            <p class="product-desc">Box of 6 Madagascar vanilla cupcakes crowned with whipped mascarpone buttercream.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(140)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$18.00</span>
+                <span class="original-price">$22.00</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-4')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Donuts -->
+        <div class="product-card product-grid-item" data-category="donuts">
+          <div class="product-image-wrap">
+            <img src="assets/raspberry-tart.webp" alt="Pistachio Glazed Donut">
+            <div class="product-badges">
+              <span class="badge badge-discount">-15%</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-5" onclick="window.Bakery.toggleWishlist('prod-5')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-5')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Donuts</span>
+            <h4 class="product-title">Pistachio Glazed Donut</h4>
+            <p class="product-desc">Brioche donut dipped in roasted Sicilian pistachio glaze, finished with sea salt.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(88)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$4.25</span>
+                <span class="original-price">$5.00</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-5')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Desserts / Macarons -->
+        <div class="product-card product-grid-item" data-category="desserts">
+          <div class="product-image-wrap">
+            <img src="assets/french-macarons.webp" alt="Gourmet Macarons Box">
+            <div class="product-badges">
+              <span class="badge badge-gold">Gift Box</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-6" onclick="window.Bakery.toggleWishlist('prod-6')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-6')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Desserts</span>
+            <h4 class="product-title">Gourmet Macarons (12 pcs)</h4>
+            <p class="product-desc">Parisian almond shells with salted caramel, raspberry rose, matcha & dark ganache.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(175)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$26.00</span>
+                <span class="original-price">$30.00</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-6')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Cheesecake -->
+        <div class="product-card product-grid-item" data-category="cakes">
+          <div class="product-image-wrap">
+            <img src="assets/cheesecake.webp" alt="NY Baked Cheesecake">
+            <div class="product-badges">
+              <span class="badge badge-fresh">Classic</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-7" onclick="window.Bakery.toggleWishlist('prod-7')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-7')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Cakes</span>
+            <h4 class="product-title">New York Baked Cheesecake</h4>
+            <p class="product-desc">Dense, velvety cream cheese on a spiced graham crust with fresh strawberry glaze.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="rating-count">(112)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$38.00</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-7')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Cookies -->
+        <div class="product-card product-grid-item" data-category="cookies">
+          <div class="product-image-wrap">
+            <img src="assets/choc-cookies.webp" alt="Chunky Chocolate Cookies">
+            <div class="product-badges">
+              <span class="badge badge-bestseller">Bestseller</span>
+            </div>
+            <button class="product-wishlist-btn" data-product-id="prod-8" onclick="window.Bakery.toggleWishlist('prod-8')" title="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="product-quickview-btn" onclick="window.Bakery.openQuickView('prod-8')">
+              <i class="fa-regular fa-eye"></i> Quick View
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category-tag">Cookies</span>
+            <h4 class="product-title">Chunky Sea Salt Choc Cookies</h4>
+            <p class="product-desc">Box of 8 cookies loaded with molten dark chocolate chunks and Maldon sea salt flakes.</p>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(210)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="current-price">$14.50</span>
+                <span class="original-price">$18.00</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="window.Bakery.addToCart('prod-8')" title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== C. SHOP BY CATEGORY ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Explore Menu</span>
+        <h2>Shop By Category</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-bread-slice"></i><span></span></div>
+        <p>Discover our range of freshly baked artisan breads, customized cakes, and decadent confections.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Category 1 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/sourdough-bread.webp" alt="Cakes Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Cakes</h3>
+            <div class="category-count">
+              <span>24 Creations</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 2 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/croissant-hero.webp" alt="Artisan Breads Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Breads</h3>
+            <div class="category-count">
+              <span>18 Varieties</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 3 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/artisan-baguette.webp" alt="Pastries Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Pastries</h3>
+            <div class="category-count">
+              <span>16 Items</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 4 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/choc-cookies.webp" alt="Cookies Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Cookies</h3>
+            <div class="category-count">
+              <span>12 Batches</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 5 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/raspberry-tart.webp" alt="Donuts Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Donuts</h3>
+            <div class="category-count">
+              <span>10 Flavors</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 6 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/french-macarons.webp" alt="Desserts Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Desserts</h3>
+            <div class="category-count">
+              <span>20 Treats</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 7 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/chocolate-eclair.webp" alt="Cupcakes Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Cupcakes</h3>
+            <div class="category-count">
+              <span>14 Styles</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 8 -->
+        <a href="404.html" class="category-card">
+          <img src="assets/dessert-table.webp" alt="Chocolates Category">
+          <div class="category-overlay">
+            <h3 class="category-title">Chocolates</h3>
+            <div class="category-count">
+              <span>15 Bonbons</span>
+              <div class="category-btn-icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== D. TODAY'S SPECIAL OFFERS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="offer-section">
+        <div class="offer-grid">
+          <div class="offer-content">
+            <span class="offer-tag"><i class="fa-solid fa-bolt"></i> Daily Chef's Special</span>
+            <h2 class="offer-title">Triple Chocolate Hazelnut Gateau</h2>
+            <p class="offer-desc">
+              Velvety Gianduja cream layered with crunchy praline wafers and roasted Piedmont hazelnuts, finished with a mirror glaze. Limited quantity baked every morning!
+            </p>
+            <div class="offer-price-row">
+              <span class="deal-price">$28.00</span>
+              <span class="deal-original">$45.00</span>
+              <span class="badge badge-discount">Save 38%</span>
+            </div>
+
+            <!-- Animated Countdown Timer -->
+            <div class="offer-countdown">
+              <div class="countdown-box">
+                <span class="countdown-num" id="cd-hours">14</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-box">
+                <span class="countdown-num" id="cd-minutes">45</span>
+                <span class="countdown-label">Mins</span>
+              </div>
+              <div class="countdown-box">
+                <span class="countdown-num" id="cd-seconds">30</span>
+                <span class="countdown-label">Secs</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-lg" onclick="window.Bakery.addToCart('prod-2')">
+              <i class="fa-solid fa-cart-shopping"></i> Claim Special Offer
+            </button>
+          </div>
+
+          <div class="offer-media">
+            <img src="assets/sourdough-bread.webp" alt="Special Offer Cake">
+            <div class="discount-circle">
+              <span>38%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== E. WHY CHOOSE OUR BAKERY ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Bakery Difference</span>
+        <h2>Why Connoisseurs Choose Us</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-medal"></i><span></span></div>
+        <p>We blend timeless French baking heritage with honest, pure ingredients and uncompromising kitchen hygiene.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h4 class="feature-title">Fresh Organic Ingredients</h4>
+          <p class="feature-desc">We source stoneground heritage flour, pure butter from Normandy, organic eggs, and raw Madagascar vanilla.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <h4 class="feature-title">Baked Fresh Daily</h4>
+          <p class="feature-desc">Our ovens light up at 4:00 AM every single morning. We never sell day-old baked goods or frozen doughs.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h4 class="feature-title">Bespoke Custom Designs</h4>
+          <p class="feature-desc">Our master decorators transform your dream celebration cake into an edible masterpiece with fine detailing.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="feature-title">Hygienic Modern Kitchen</h4>
+          <p class="feature-desc">Hospital-grade clean baking facility with 100% temperature-controlled fermentation and preparation rooms.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h4 class="feature-title">Fast & Gentle Delivery</h4>
+          <p class="feature-desc">Specially cushioned climate-controlled vans ensure your delicate tiered cakes arrive in pristine condition.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h4 class="feature-title">Passion in Every Crumb</h4>
+          <p class="feature-desc">Over 15 years of artisanal dedication, crafting unforgettable sweet memories for families and celebrations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== F. BAKERY STATISTICS ==================== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="stats-counter-grid">
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-users stat-counter-icon"></i>
+          <div class="stat-number" data-target="10000" data-suffix="+">0</div>
+          <div class="stat-title">Happy Customers</div>
+        </div>
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-cake-candles stat-counter-icon"></i>
+          <div class="stat-number" data-target="50" data-suffix="+">0</div>
+          <div class="stat-title">Fresh Products</div>
+        </div>
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-calendar-check stat-counter-icon"></i>
+          <div class="stat-number" data-target="15" data-suffix="+">0</div>
+          <div class="stat-title">Years Experience</div>
+        </div>
+        <div class="stat-counter-box">
+          <i class="fa-solid fa-box-open stat-counter-icon"></i>
+          <div class="stat-number" data-target="25000" data-suffix="+">0</div>
+          <div class="stat-title">Orders Delivered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== G. CUSTOMER TESTIMONIALS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sweet Words</span>
+        <h2>What Our Customers Say</h2>
+        <div class="ornament"><span></span><i class="fa-solid fa-comment-dots"></i><span></span></div>
+        <p>Real stories from delighted guests who made their special moments unforgettable with our bakery.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <div class="stars" style="margin-bottom: 0.75rem;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "We ordered our 3-tier wedding cake from Le Petit Four and it took everyone's breath away! The Belgian truffle flavor with raspberry filling was unforgettable."
+          </p>
+          <div class="testimonial-user">
+            <img src="assets/avatar-madeleine.webp" alt="Eleanor Vance" class="user-avatar">
+            <div class="user-info">
+              <h5>Eleanor Vance</h5>
+              <span class="user-order-tag">Ordered: Bespoke 3-Tier Wedding Cake</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <div class="stars" style="margin-bottom: 0.75rem;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "The sourdough bread here has ruined all other bread for me! Crusty, chewy, and holds up so well. Plus their morning butter croissants are straight out of Paris."
+          </p>
+          <div class="testimonial-user">
+            <img src="assets/avatar-julien.webp" alt="Marcus Sterling" class="user-avatar">
+            <div class="user-info">
+              <h5>Marcus Sterling</h5>
+              <span class="user-order-tag">Ordered: Weekly Sourdough & Pastry Box</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <div class="stars" style="margin-bottom: 0.75rem;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Hosted our corporate gala with 200 guests and the catering dessert table was an absolute sensation. Punctual delivery and stunning presentation."
+          </p>
+          <div class="testimonial-user">
+            <img src="assets/avatar-elena.webp" alt="Sophia Chen" class="user-avatar">
+            <div class="user-info">
+              <h5>Sophia Chen</h5>
+              <span class="user-order-tag">Ordered: Corporate Dessert Table Catering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== H. CUSTOM CAKE CTA BANNER ==================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="custom-cake-cta-banner">
+        <h2>Have a Special Celebration?</h2>
+        <p>From whimsical birthday tiers to grand wedding centerpieces, let our master chefs create a cake as unique as your special day.</p>
+        
+        <div class="cake-types-pills">
+          <span class="cake-pill"><i class="fa-solid fa-gift"></i> Birthday Cakes</span>
+          <span class="cake-pill"><i class="fa-solid fa-ring"></i> Wedding Cakes</span>
+          <span class="cake-pill"><i class="fa-solid fa-champagne-glasses"></i> Anniversary Cakes</span>
+          <span class="cake-pill"><i class="fa-solid fa-building"></i> Corporate Cakes</span>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="404.html" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Customize Your Cake
+          </a>
+          <a href="404.html" class="btn btn-white btn-lg">
+            <i class="fa-solid fa-calendar-check"></i> Book Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL CART SLIDEOVER DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-accent"></i> Your Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-body" id="cart-drawer-body">
+      <!-- Items dynamically populated by JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Estimated Delivery</span>
+        <span id="cart-delivery">$0.00</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='404.html';">
+        <i class="fa-solid fa-lock"></i> Checkout Now
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== GLOBAL QUICK VIEW MODAL ==================== -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="window.Bakery.closeQuickView()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="quickview-grid">
+        <div class="quickview-media">
+          <img src="" alt="" class="quickview-img">
+        </div>
+        <div class="quickview-details">
+          <div class="quickview-badge-wrap">
+            <span class="badge badge-gold quickview-cat-val">Category</span>
+          </div>
+          <h3 class="quickview-title">Product Title</h3>
+          <div class="quickview-price-rating">
+            <span class="quickview-price">$0.00</span>
+            <div class="product-rating" style="margin: 0;">
+              <span class="stars" style="color: #F59E0B;"><i class="fa-solid fa-star"></i></span>
+              <strong class="quickview-rating-val" style="margin-left: 4px;">4.9</strong>
+              <span class="rating-count quickview-reviews-val">(0 reviews)</span>
+            </div>
+          </div>
+          <p class="quickview-desc">Description placeholder</p>
+          <div class="quickview-meta-list">
+            <div><strong>Availability:</strong> Fresh In Stock (Baked Daily)</div>
+            <div><strong>Storage:</strong> Store at 18-20°C in cool dry place</div>
+          </div>
+          <div class="quickview-actions">
+            <div class="qty-input-group">
+              <button onclick="document.getElementById('quickview-qty').stepDown()">-</button>
+              <input type="number" id="quickview-qty" value="1" min="1" max="50">
+              <button onclick="document.getElementById('quickview-qty').stepUp()">+</button>
+            </div>
+            <button class="btn btn-primary modal-add-cart-btn" style="flex-grow: 1;">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bakery-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 0.5rem;">
+            <img src="assets/logo.webp" alt="Le Petit Four Artisan Bakery" class="footer-brand-logo">
+          </a>
+          <p>Handcrafted European sourdoughs, viennoiseries, custom event cakes, and fine chocolate bonbons baked fresh every morning.</p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Bakery Links -->
+        <div class="footer-col">
+          <h4>Bakery</h4>
+          <div class="footer-links">
+            <a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a>
+            <a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a>
+            <a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a>
+            <a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+
+        <!-- Shop Links -->
+        <div class="footer-col">
+          <h4>Shop Fresh</h4>
+          <div class="footer-links">
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Celebration Cakes</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Artisan Sourdough</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> French Pastries</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Gourmet Cookies</a>
+            <a href="404.html"><i class="fa-solid fa-chevron-right"></i> Macarons & Desserts</a>
+          </div>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="footer-col footer-contact">
+          <h4>Visit & Contact Us</h4>
+          <div style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.8);">
+            <div style="display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-location-dot text-gold" style="margin-top: 4px; font-size: 0.95rem;"></i>
+              <span style="line-height: 1.5;">MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">1800789456</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+              <i class="fa-solid fa-envelope text-gold"></i>
+              <a href="404.html" style="color: inherit; font-weight: 600;">info@stackly.com</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <i class="fa-solid fa-clock text-gold"></i>
+              <span>Mon - Sun: 7:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Map -->
+        <div class="footer-col footer-map-col">
+          <h4>Location Map</h4>
+          <div class="footer-map-wrapper">
+            <iframe 
+              title="Stackly Bakery Salem Location"
+              src="https://maps.google.com/maps?q=Stackly,%20MMR%20Complex,%20Chinna%20Thirupathi,%20Salem,%20Tamil%20Nadu%20636008&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="404.html" class="footer-map-btn">
+              <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Le Petit Four Artisan Bakery. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Food Hygiene Certificate</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
