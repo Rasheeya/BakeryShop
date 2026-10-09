@@ -45,6 +45,7 @@ html, body {
     box-shadow: none;
     z-index: 1050;
     background: #FFFFFF;
+    transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
   .dashboard-sidebar.open {
@@ -756,7 +757,7 @@ html, body {
   }
 }
 
-/* Responsive Table */
+/* Responsive Table & Button Alignments */
 .dashboard-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -765,7 +766,7 @@ html, body {
 
 .dashboard-table {
   width: 100%;
-  min-width: 540px;
+  min-width: 600px;
   border-collapse: collapse;
   text-align: left;
 }
@@ -778,13 +779,57 @@ html, body {
   text-transform: uppercase;
   color: var(--text-muted);
   letter-spacing: 0.05em;
+  vertical-align: middle;
 }
 
 .dashboard-table td {
-  padding: 1rem;
+  padding: 0.85rem 1rem;
   border-bottom: 1px solid var(--border-light);
   font-size: 0.9rem;
   color: var(--text-main);
+  vertical-align: middle;
+}
+
+/* Action button container inside table cells */
+.dashboard-table td > div[style*="display: flex"],
+.dashboard-table td .table-actions-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 0.45rem !important;
+  min-width: 175px !important;
+  max-width: 210px !important;
+}
+
+.dashboard-table td .btn,
+.dashboard-table td button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 1 1 0px !important;
+  min-width: 78px !important;
+  height: 32px !important;
+  padding: 0 0.65rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  border-radius: var(--radius-full) !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  transition: all var(--transition-fast) !important;
+}
+
+/* Single button in table action cell */
+.dashboard-table td > div[style*="display: flex"] > .btn:only-child,
+.dashboard-table td > div[style*="display: flex"] > button:only-child,
+.dashboard-table td .table-actions-wrap > .btn:only-child,
+.dashboard-table td > .btn:only-child,
+.dashboard-table td > button:only-child {
+  flex: 0 0 78px !important;
+  max-width: 78px !important;
+  min-width: 78px !important;
 }
 
 .order-status-badge {
@@ -1134,4 +1179,199 @@ html, body {
 .quick-action-info span {
   font-size: 0.75rem;
   color: var(--text-muted);
+}
+
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE MOBILE OPTIMIZATIONS (USER DASHBOARD)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .dashboard-main {
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    padding: 0 1rem 1.75rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dashboard-page-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .dashboard-page-header h2 {
+    font-size: clamp(1.4rem, 5vw, 1.85rem);
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+  }
+
+  .dashboard-page-header p {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .stats-overview-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .order-filter-toolbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.85rem !important;
+  }
+
+  .order-filter-group {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+    padding-bottom: 0.35rem !important;
+    width: 100% !important;
+  }
+
+  .order-filter-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding: 0.45rem 0.9rem !important;
+  }
+
+  .order-search-input {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 16px !important;
+  }
+
+  .dashboard-box form .form-control,
+  .dashboard-box input,
+  .dashboard-box select {
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-box {
+    padding: 1.25rem 1rem !important;
+    border-radius: var(--radius-md) !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .dashboard-box-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .dashboard-box-header > div:first-child {
+    width: 100% !important;
+  }
+
+  .dashboard-box-header .btn,
+  .dashboard-box-header button,
+  .dashboard-box-header a.btn {
+    align-self: flex-start !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .dashboard-box > div[style*="justify-content: space-between"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+  }
+
+  .dashboard-box div[style*="justify-content: flex-end"],
+  .dashboard-box form div[style*="justify-content: flex-end"] {
+    justify-content: stretch !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+  }
+
+  .dashboard-box div[style*="justify-content: flex-end"] button,
+  .dashboard-box div[style*="justify-content: flex-end"] a,
+  .dashboard-box form div[style*="justify-content: flex-end"] button,
+  .dashboard-box form div[style*="justify-content: flex-end"] a {
+    width: 100% !important;
+    text-align: center !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .offer-promo-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+    text-align: left !important;
+    padding: 1.25rem 1rem !important;
+  }
+
+  .offer-promo-card > i {
+    align-self: flex-end !important;
+    margin-top: -1.5rem !important;
+    opacity: 0.4 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main {
+    padding: 0 0.75rem 1.5rem !important;
+  }
+
+  .dashboard-topbar {
+    padding: 0.6rem 0.75rem !important;
+    margin: 0 -0.75rem 1rem -0.75rem !important;
+  }
+
+  .topbar-avatar-circle {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .topbar-icon-btn {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .dashboard-mobile-logo img {
+    height: 30px !important;
+  }
+
+  .spending-amount {
+    font-size: 1.85rem !important;
+  }
+
+  .quick-actions-bar {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  .quick-action-card {
+    padding: 0.85rem 0.75rem !important;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 0.75rem 0.65rem !important;
+    font-size: 0.82rem !important;
+  }
 }
